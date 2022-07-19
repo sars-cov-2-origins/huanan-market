@@ -1,0 +1,431 @@
+Id_POI,Name_POI,Name_english,Longitude,Latitude,Category,Checkin user number,Category_en
+B2094655D464A0FE409A,武汉国际广场购物中心, Wuhan International Plaza Shopping Center,114.270146,30.580791,商场,13104,shopping mall
+B2094757D06FA2FE4692,光谷国际广场, Optics Valley International Plaza,114.397504,30.507444,商场,10009,shopping mall
+B2094655D464A4FA429C,群光广场, Qunguang Plaza,114.355253,30.525617,商场,9541,shopping mall
+B2094655D464A5FB419E,国立武汉大学, National Wuhan University,114.35844,30.53409,高等院校,7500,College
+B2094655D56DABF84593,新佳丽时尚广场 Happy站台, New Belle Fashion Plaza Happy platform,114.291241,30.578768,商场,6198,shopping mall
+B2094655D56CA0FA4998,销品茂, Pinmao,114.34376,30.58903,商场,5472,shopping mall
+B2094655D56DAAF94899,中南财经政法大学南湖校区, Zhongnan University of Economics and Law Nanhu Campus,114.38855,30.4789,高等院校,5269,College
+B2094757D06FAAF54593,武汉经开万达广场, Wuhan Economic Development Wanda Plaza,114.163466,30.505137,商场,4725,shopping mall
+B2094655D464A2F4479A,归元禅寺, Guiyuan Temple,114.26013,30.5457,寺庙道观,4661,Temple
+B2094655D56CA3FF409D,湖北大学(武昌本部校区), Hubei University ( Wuchang headquarters campus ),114.32936,30.57727,高等院校,4308,College
+B2094757D06FA5FD4198,武汉摩尔城, Wuhan Moore City,114.207952,30.558528,商场,4261,shopping mall
+B2094655D56EA7F8409D,光谷时间广场, Optics Valley Time Square,114.39672,30.49469,商场,4197,shopping mall
+B2094757D06FA7F5469B,光谷软件园, Optics Valley Software Park,114.403097,30.474922,楼宇,3954,Building
+B2094655D464ABFC409E,武商亚贸广场, Wushang Asia Trade Plaza,114.34292,30.52943,商场,3466,shopping mall
+B2094757D06FAAFE469F,华中科技大学同济医学院附属同济医院," Huazhong University of Science Tongji Hospital, Tongji Medical College",114.262128,30.579312,医院,3387,Hospital
+B2094655D464AAFC429A,大洋百货(中山大道店), Ocean Department Store ( Zhongshan Avenue Store ),114.29016,30.57763,商场,3032,shopping mall
+B2094757D06FA6FC449D,华中科技大学光谷体育馆, Huazhong University of Science and Technology Optics Valley Gymnasium,114.418098,30.507542,运动场所,2841,Sports place
+B2094655D464A4FE459B,武汉大学信息学部," Department of Informatics, Wuhan University",114.359585,30.528172,高等院校,2817,College
+B2094655D464A0FF499A,武汉市第一医院, Wuhan First Hospital,114.27166,30.57235,医院,2645,Hospital
+B2094757D06FA4FC4099,广州军区武汉总医院(中南医院、陆军总院)," Wuhan General Hospital of Guangzhou Military Region ( Zhongnan Hospital, Army General Hospital )",114.344322,30.530001,医院,2640,Hospital
+B2094757D068A3FB4199,华中科技大学同济医学院附属协和医院," Union Hospital Affiliated to Tongji Medical College, Huazhong University of Science and Technology",114.275742,30.58349,医院,2575,Hospital
+B2094757D06BABFA4499,武汉大学东湖分校, Wuhan University East Lake Branch,114.316418,30.422749,高等院校,2346,College
+B2094655D465A5F84792,武汉理工大学马房山校区东院," East Campus, Mafangshan Campus, Wuhan University of Technology",114.35106,30.52153,高等院校,2336,College
+B2094655D56CA2FC4398,武汉理工大学鉴湖校区, Wuhan University of Technology Jianhu Campus,114.34324,30.51309,高等院校,2187,College
+B2094655D464A3FB459D,武汉大学人民医院, Wuhan University People's Hospital,114.29853,30.53515,医院,2086,Hospital
+B2094655D56CA1FF4792,汉口东部购物公园, East Hankou Shopping Park,114.31677,30.6236,商场,2083,shopping mall
+B2094655D46BA4FC429A,武汉万达商业广场, Wuhan Wanda Commercial Plaza,114.29164,30.57736,商场,2013,shopping mall
+B2094757D06FA4F9439E,武汉国际会展中心,Wuhan International Convention and Exhibition Center,114.275453,30.582323,楼宇,1971,Building
+B2094757D06FA6FB4093,武汉大学中南医院, Wuhan University Zhongnan Hospital,114.353635,30.552967,医院,1917,Hospital
+B2094655D464A4FB4893,华中师范大学(东门), Huazhong Normal University ( East Gate ),114.36772,30.51499,高等院校,1872,College
+B2094757D069A4F5489E,沃尔玛(坐标城光谷天地店), walmart ( Coordinate City Optics Valley Tiandi Store ),114.410516,30.47835,超级市场,1861,supermarket
+B2094655D46BAAF5469E,武汉理工大学升升学生公寓, Shengsheng Student Apartment of Wuhan University of Technology,114.343987,30.507397,住宅区,1853,Residential area
+B2094655D465A5F8439E,VOX LIVEHOUSE 酒吧, VOX LIVEHOUSE bar,114.39986,30.51234,酒吧,1757,bar
+B2094757D06AA0FD469F,沃尔玛(南湖城市广场店), walmart ( Nanhu City Plaza Store ),114.325257,30.505154,超级市场,1661,supermarket
+B2094757D068A4FD469B,南湖花园, South Lake Garden,114.316267,30.510898,住宅区,1619,Residential area
+B2094655D464AAF4409A,华中科技大学东校区, East Campus of Huazhong University of Science and Technology,114.43287,30.50605,高等院校,1598,College
+B2094757D16AAAF9419B,新世界国贸大厦, New World International Trade Building,114.269613,30.594837,楼宇,1544,Building
+B2094655D465ABF8459D,武汉科技大学青山校区, Wuhan University of Science and Technology Qingshan Campus,114.36961,30.62335,高等院校,1526,College
+B2094655D464A0FE459F,世贸广场, World Trade Plaza,114.2692,30.58017,商场,1476,shopping mall
+B2094655D469A6F8419F,武汉体育中心体育馆(东广场), Wuhan Sports Center Gymnasium ( East Plaza ),114.17504,30.50074,综合体育馆,1423,Comprehensive Stadium
+B2094757D06AA1F8479C,新华路体育场, Xinhua Road Stadium,114.274582,30.586611,运动场所,1396,Sports place
+B2094655D46DA1FF4792,湖北警官学院(解放大道), Hubei Police Academy ( Liberation Avenue ),114.20638,30.59159,高等院校,1395,College
+B2094655D56DABF4489E,华中师范大学(北门), Huazhong Normal University ( North Gate ),114.36093,30.52418,高等院校,1364,College
+B2094757D06BA0FA4792,muse, muse,114.297939,30.585435,酒吧,1338,bar
+B2094757D06FA6FF419F,武汉大学工学部, Wuhan University Faculty of Engineering,114.367741,30.544638,高等院校,1286,College
+B2094655D46BA3FF4898,新民众乐园, New People's Paradise,114.28686,30.57586,商场,1252,shopping mall
+B2094655D56CA2FC459B,武汉大学(凌波门), Wuhan University ( Limbo Gate ),114.37062,30.54329,高等院校,1176,College
+B2094757D06BAAFD409C,保利心语, Poly heart language,114.325713,30.472708,住宅区,1148,Residential area
+B2094655D464A3F94393,中南财经政法大学首义校区, Zhongnan University of Economics and Law Shouyi Campus,114.31317,30.5401,高等院校,1133,College
+B2094655D46FA1FF409C,港澳中心, Hong Kong Macau Center,114.28991,30.58242,商场,1126,shopping mall
+B2094655D468A3F4459C,中心百货, Central Department Store,114.29017,30.58179,商场,1083,shopping mall
+B2094757D069A2F4439C,新世界百货(时尚广场店), new world department store ( Fashion Plaza Store ),114.289853,30.582341,商场,1040,shopping mall
+B2094655D464A4F44999,华中师范大学(南门), Huazhong Normal University ( South Gate ),114.35736,30.51424,高等院校,1015,College
+B2094757D069A2F8459B,沿江一号MALL, No.1 along the river MALL,114.290092,30.56653,商场,998,shopping mall
+B2094655D56EA7F8409B,铜锣湾广场,Causeway Bay Plaza,114.26661,30.55029,住宅区,983,Residential area
+B2094757D06FA7FC419F,大洋百货(光谷店), Ocean Department Store ( Optics Valley Store ),114.400688,30.505489,商场,982,shopping mall
+B2094757D069A0FB4693,武汉大学口腔医院, Wuhan University Stomatological Hospital,114.365067,30.5224,医院,970,Hospital
+B2094655D464A5FD459C,湖北省电视大楼, Hubei Provincial TV Building,114.32519,30.55418,楼宇,963,Building
+B2094757D06AA0FE449C,融科天城, Rongtech Skycity,114.296372,30.595606,商场,949,shopping mall
+B2094655D464A4FD419D,湖北省妇幼保健院, Hubei Maternal and Child Health Hospital,114.35179,30.52759,医院,940,Hospital
+B2094757D068A0FE409D,大洋百货(龙阳店), Ocean Department Store ( Longyang Store ),114.208653,30.561502,商场,929,shopping mall
+B2094655D465A0FF449E,泰塑学生公寓, Taisu Student Apartment,114.43273,30.458,住宅区,923,Residential area
+B2094655D46EA7FC459C,塔子湖体育中心, Tazi Lake Sports Center,114.28396,30.64028,综合体育馆,918,Comprehensive Stadium
+B2094757D064A4F54392,湖北省中医院(光谷院区), Hubei Provincial Hospital of Traditional Chinese Medicine ( Optics Valley Campus ),114.407816,30.507007,医院,913,Hospital
+B2094757D069A7F94599,新世界百货(徐东店), new world department store ( Xudongdian ),114.346901,30.588421,商场,904,shopping mall
+B2094655D464AAFC4698,武汉王府井百货, Wuhan Wangfujing Department Store,114.291218,30.579419,商场,888,shopping mall
+B2094655D56CA2FB469D,万科金色家园, Vanke Golden Home,114.2805,30.58238,住宅区,850,Residential area
+B2094757D069A3F84298,古德寺, Good Temple,114.308189,30.618099,寺庙道观,850,Temple
+B2094757D06AA0FF419D,武汉理工大学（鉴湖）, Wuhan University of Technology (Jianhu),114.345459,30.512356,高等院校,844,College
+B2094757D06AA7F4469F,ATM潮流百货(司门口店), ATM trendy department store ( Simen Store ),114.29806,30.54612,商场,823,shopping mall
+B2094757D565A1FE429D,摩尔城商业, Moore City Business,114.209726,30.561644,楼宇,812,Building
+B2094655D56EA4FF499A,领秀城, Leading Show City,114.37456,30.5055,住宅区,807,Residential area
+B2094750D565A5FA449D,长江大学武汉校区, Yangtze University Wuhan Campus,114.029245,30.530993,高等院校,794,College
+B2094655D56CA2FC4498,国立武汉大学(南门), National Wuhan University ( South Gate ),114.35795,30.53301,高等院校,794,College
+B2094655D468A2FD479B,武汉市第二医院, Wuhan Second Hospital,114.29486,30.58168,医院,786,Hospital
+B2094655D56DABFE419A,武汉大学医学部, Wuhan University School of Medicine,114.3561,30.55326,高等院校,783,College
+B2094655D46EA7FC4698,汉口花园, Hankou Garden,114.27001,30.63432,住宅区,783,Residential area
+B2094757D069A2F5419A,华中师范大学佑铭体育馆," Youming Gymnasium, Central China Normal University",114.358476,30.515527,综合体育馆,781,Comprehensive Stadium
+B2094655D464A4FC4193,中建广场, China Construction Plaza,114.33213,30.53465,楼宇,762,Building
+B2094757D069ABF94992,SOGO庄胜崇光百货, SOGO Zhuang Sheng Sogo Department Store,114.274375,30.581755,商场,751,shopping mall
+B2094655D56DAAFB499A,武汉科技学院阳光校区, Wuhan University of Science and Technology Sunshine Campus,114.34397,30.37343,高等院校,735,College
+B2094655D46DA6FB409C,沿海赛洛城, coastal silo city,114.15935,30.63504,住宅区,723,Residential area
+B2094655D56DA0F9429F,新世界百货(汉阳店), new world department store ( Hanyang Store ),114.26641,30.55079,商场,715,shopping mall
+B2094757D068AAFD4099,武汉大学经济与管理学院," School of Economics and Management, Wuhan University",114.373037,30.539092,高等院校,692,College
+B2094655D464A0FE489B,泰合广场,Thai Hop Square,114.26917,30.57476,楼宇,685,Building
+B2094655D464AAF9419D,金地·格林小城(书城路), Gemdale · Green Town ( Shucheng Road ),114.33627,30.49905,住宅区,683,Residential area
+B2094655D56CA1F4469F,东立国际, Dongli International,114.314,30.62601,住宅区,675,Residential area
+B2094655D464A1FB459F,楚天传媒大厦, Chutian Media Building,114.36608,30.56727,楼宇,674,Building
+B2094655D464A1F9439D,麦德龙, Metro,114.357524,30.578116,超级市场,673,supermarket
+B2094655D464A6FF4492,湖北中医学院(昙华林), Hubei University of Traditional Chinese Medicine ( Tan Hualin ),114.31414,30.55011,高等院校,671,College
+B2094757DA69A7FF4799,武汉经开万达, Wuhan Economic Development Wanda,114.175471,30.507148,商场,661,shopping mall
+B2094655D464A0F5479F,融侨华府, Rongqiao Huafu,114.31536,30.56882,住宅区,648,Residential area
+B2094655D56DA1FE499D,湖北大学二期学生公寓, Hubei University Phase II Student Housing,114.33222,30.57439,住宅区,647,Residential area
+B2094757D06BA0F54492,武汉大学正门, Main entrance of Wuhan University,114.365503,30.529797,高等院校,629,College
+B2094757D565A4FD419C,武汉·恒大绿洲, Wuhan · Evergrande Oasis,114.126534,30.550497,住宅区,627,Residential area
+B2094655D56CA4F54799,水岸星城, Waterfront Star City,114.34337,30.57578,住宅区,611,Residential area
+B2094655D46FABF5439E,苏荷, soho,114.30173,30.58482,酒吧,608,bar
+B2094655D56EA0F9449D,湘隆时代广场, Xianglong Times Square,114.16844,30.49864,商场,604,shopping mall
+B2094757D16DA2F4409D,武汉理工大学西院大礼堂, The Auditorium of the West Campus of Wuhan University of Technology,114.346759,30.522614,高等院校,600,College
+B2094757D069A6FB4098,沃尔玛购物广场(宗关西汇店), Walmart Supercenter ( Zongguan Xihui Store ),114.22216,30.584009,便民商店/便利店,598,Convenience Store/Convenience Store
+B2094757D16FA7F84298,湖北省中山医院, Zhongshan Hospital of Hubei Province,114.254111,30.568989,医院,594,Hospital
+B2094655D465A3F5459F,保利花园, Poly Garden,114.41265,30.49928,住宅区,589,Residential area
+B2094655D468A0FB419B,武汉市普仁医院, Wuhan Puren Hospital,114.38132,30.63113,医院,581,Hospital
+B2094757D565A7F84993,积玉桥万达广场, Jiyu Bridge Wanda Plaza,114.310167,30.56509,楼宇,580,Building
+B2094655D464A4F5409E,武汉理工大学东院(南门), East Campus of Wuhan University of Technology ( South Gate ),114.35446,30.5138,高等院校,563,College
+B2094655D46DA6FE449A,民航小区, Civil Aviation Community,114.23893,30.6282,住宅区,561,Residential area
+B2094655D56EA7F44198,中国人民解放军第一六一医院, The 161st Hospital of the Chinese People's Liberation Army,114.30693,30.61427,医院,556,Hospital
+B2094655D56EA0FD4099,万科城, Vanke City,114.237632,30.626845,住宅区,554,Residential area
+B2094655D56CA4FF4699,人信·汉商银座, people believe · Hanshang Ginza,114.26781,30.54927,住宅区,554,Residential area
+B2094655D468A1F8489A,金色华府, Golden Washington,114.28607,30.60939,住宅区,540,Residential area
+B2094655D464A4FB489F,华中师范大学音乐学院, Central China Normal University School of Music,114.3614,30.5156,高等院校,531,College
+B2094655D56DA1F44998,宝利金国际广场A座, Poly Gold International Plaza A seat,114.29216,30.57633,楼宇,531,Building
+B2094655D56CA7F4479A,武汉科技大学人和大学生公寓, Wuhan University of Science and Technology and Student Apartments,114.36517,30.6228,住宅区,524,Residential area
+B2094655D465A7FD449E,湖北经济学院逸夫教学楼," Yifu Teaching Building, Hubei University of Economics",114.43498,30.41524,高等院校,518,College
+B2094655D468A0FA429E,武汉市儿童医院, Wuhan Children's Hospital,114.287662,30.603421,医院,516,Hospital
+B2094757D06FA6FC429E,新世界百货(国贸店),new world department store ( Guomao Store ),114.269829,30.594669,商场,505,shopping mall
+B2094655D465A0FC489E,华中师范大学汉口分校教学楼, Central China Normal University Hankou Branch Teaching Building,114.31624,30.41433,高等院校,483,College
+B2094655D464A6FE439A,湖北省中医院, Hubei Provincial Hospital of Traditional Chinese Medicine,114.30942,30.55005,医院,482,Hospital
+B2094655D464A0FC4099,友谊大厦(友谊路), Friendship Building ( Friendship Road ),114.28005,30.57607,楼宇,480,Building
+B2094655D46FABF4469F,武汉市中医医院, Wuhan Traditional Chinese Medicine Hospital,114.29777,30.58851,医院,480,Hospital
+B2094655D56CA3FB409F,万达广场B座, Wanda square B seat,114.29087,30.57738,商场,474,shopping mall
+B2094655D56CA2FD4992,湖北财税职业学院西区, Hubei Finance and Taxation Vocational College West District,114.29671,30.51535,高等院校,471,College
+B2094655D469A6FD489E,南国明珠, Pearl of the South,114.20059,30.54111,住宅区,470,Residential area
+B2094655D56CA6FB499A,华润中央公园, China Resources Central Park,114.24243,30.5654,住宅区,467,Residential area
+B2094757D068A3FD479B,中商集团中南商业大楼, Zhongnan Commercial Building of Zhongshang Group,114.332359,30.536449,商场,466,shopping mall
+B2094655D56CA7FC4892,海虹景(三眼桥北路), Haihongjing ( Sanyanqiao North Road ),114.27838,30.61276,住宅区,465,Residential area
+B2094757D069A0FD489D,东湖新村, East Lake New Village,114.369713,30.529554,住宅区,460,Residential area
+B2094757D565A5FD4193,中南民族大学工商学院黄家湖校区, South-Central University for Nationalities Business School Huangjiahu Campus,114.271321,30.458993,高等院校,451,College
+B2094757D06AA6FE4393,武钢总医院, Wuhan Iron and Steel General Hospital,114.404442,30.631861,医院,451,Hospital
+B2094655D464A3FB459C,湖北省人民医院, Hubei Provincial People's Hospital,114.29853,30.53515,医院,451,Hospital
+B2094655D464A3FB4293,中南财经政法大学(南门), Zhongnan University of Economics and Law ( South Gate ),114.31231,30.53348,高等院校,448,College
+B2094655D56CA2FE419B,武汉大学法学院, Wuhan University Law School,114.37113,30.53927,高等院校,445,College
+B2094655D56DAAFC4192,Building of Foreign Languages&&Arts, Building of Foreign Languages&&Arts,114.27237,30.45821,高等院校,441,College
+B2094757D068A1FE479B,新世界百货(武昌店), new world department store ( Wuchang store ),114.354042,30.526501,商场,438,shopping mall
+B2094655D46DA1F84493,麦德龙(硚口店), Metro ( Qiaokou Store ),114.21219,30.58643,超级市场,429,supermarket
+B2094655D46DA6FB429E,融侨锦城, Rongqiao Jincheng,114.20294,30.59378,住宅区,420,Residential area
+B2094655D465A0FC4393,武汉长江工商学院综合楼, Wuhan Changjiang University of Commerce and Industry Comprehensive Building,114.27274,30.45927,高等院校,417,College
+B2094757D069A7FF469B,武汉中心医院, Wuhan Central Hospital,114.294807,30.581551,医院,412,Hospital
+B2094655D56CA4FC429A,武汉市精神病医院, Wuhan Psychiatric Hospital,114.27487,30.57474,医院,406,Hospital
+B2094655D468A3FB4398,武汉亚洲心脏病医院, Wuhan Asian Heart Hospital,114.28231,30.58313,医院,403,Hospital
+B2094655D56CAAF5429B,观湖苑, Guanhuyuan,114.09002,30.46218,住宅区,402,Residential area
+B2094655D56DAAFB4793,中百仓储蔡甸购物广场, Zhongbai Warehouse Caidian Shopping Plaza,114.02786,30.58254,商场,396,shopping mall
+B2094655D56CA1F44393,爱家国际华城, Love Home International Huacheng,114.3638,30.59127,住宅区,394,Residential area
+B2094757D069AAF5419D,武汉市第四中学, Wuhan No. 4 Middle School,114.217939,30.587096,中学,394,Middle school
+B2094655D464A7FD479F,武汉科技学院(东湖校区),Wuhan Institute of Technology ( East Lake Campus ),114.37282,30.57892,高等院校,385,College
+B2094655D46BAAF54599,华中师范大学体育学院," School of Physical Education, Central China Normal University",114.35784,30.50988,高等院校,385,College
+B2094655D465ABFE459E,武汉市普爱医院, Wuhan Puai Hospital,114.20512,30.59289,医院,382,Hospital
+B2094757D065A6F94192,巴黎豪庭, Paris Mansion,114.427232,30.505808,住宅区,381,Residential area
+B2094655D464A0FE409B,武汉世界贸易大厦, Wuhan World Trade Building,114.26858,30.58027,楼宇,381,Building
+B2094757D565A0F94499,湖北省奥林匹克体育中心办公楼, Hubei Olympic Sports Center Office Building,114.469353,30.475173,楼宇,378,Building
+B2094655D46EA7FC449C,统建·同安家园, unified construction · Tongan Home,114.30081,30.64924,住宅区,374,Residential area
+B2094757D565A3FC4093,大华南湖公园世家, Dahua South Lake Park Family,114.340113,30.493765,住宅区,371,Residential area
+B2094757D565A2FB499F,卡梅尔小镇, carmel town,114.439511,30.428886,住宅区,371,Residential area
+B2094757D068A1F5439D,大润发超级市场, RT-Mart Supermarket,114.285004,30.5849,便民商店/便利店,370,Convenience Store/Convenience Store
+B2094757D06AA1F54993,未来城·欧拉, future city · Euler,114.353074,30.525481,商场,365,shopping mall
+B2094655D464A6FE459B,武汉中学, Wuhan Middle School,114.31275,30.54776,中学,364,Middle school
+B2094655D465AAFE4393,武汉市妇女儿童医疗保健中心, Wuhan Women's and Children's Health Care Center,114.28822,30.60227,医院,361,Hospital
+B2094757D068AAFA419C,中百仓储(常青店), Zhongbai Warehousing ( evergreen shop ),114.239922,30.62513,超级市场,360,supermarket
+B2094655D56CA6FD489A,顶琇·晶城, Dingxiu · Crystal City,114.27156,30.61931,住宅区,356,Residential area
+B2094757D069A2FD469B,十五中, fifteen middle school,114.325447,30.537462,中学,356,Middle school
+B2094655D464A3FF459E,武汉市第三医院, Wuhan Third Hospital,114.30203,30.54024,医院,356,Hospital
+B2094655D56DA2FF449F,金地·国际花园, Gemdale · International Garden,114.3117,30.56222,住宅区,355,Residential area
+B2094757D06BA5FB459E,民生银行大厦, Minsheng Bank Building,114.273403,30.594147,楼宇,355,Building
+B2094655D56DA4FF499D,湖北经视大厦, Hubei Jingshi Building,114.33769,30.54772,楼宇,353,Building
+B2094655D56DA0FC449F,新世界中心A座, New World Center A seat,114.26662,30.57893,楼宇,351,Building
+B2094655D56DA5FC4693,湖北大学忠诚学生公寓, Hubei University Loyalty Student Apartment,114.3274,30.57183,住宅区,349,Residential area
+B2094655D465ABF5469C,万松园小区(雪松路), Wansongyuan Community ( Cedar Road ),114.26771,30.592,住宅区,349,Residential area
+B2094757D06BABFB469F,武警湖北省总队医院, Armed Police Hubei Provincial Corps Hospital,114.316559,30.542244,医院,345,Hospital
+B2094655D468A0FA4193,百佳购物广场, PARKnSHOP,114.28566,30.61785,商场,343,shopping mall
+B2094757D068A2FD419E,英东游泳跳水馆, Yingdong Swimming and Diving Hall,114.333542,30.548441,运动场所,342,Sports place
+B2094655D56CA6FA419E,现代花园, modern garden,114.40716,30.61976,住宅区,341,Residential area
+B2094655D469A7FF4698,武汉市财政大学(西院), Wuhan University of Finance ( West Court ),114.19689,30.56599,高等院校,341,College
+B2094655D56CA7FA4499,协和医院门诊部, Union Hospital Outpatient Department,114.276022,30.584364,医院,341,Hospital
+B2094655D46DABFD4799,武商建二商场, Wushangjian Second Shopping Mall,114.37551,30.62461,商场,340,shopping mall
+B2094757D66EA0FE4592,草泥马大厦,Grass Mud Horse Building,114.335486,30.5441,商场,333,shopping mall
+B2094757D16FA6F9449D,绿地国际金融城, Greenland International Financial City,114.32645,30.582853,楼宇,331,Building
+B2094655D46FAAFA439E,招银大厦, China Merchants Bank Building,114.26367,30.59368,楼宇,331,Building
+B2094757D16EA0FA4592,中铁四院, China Railway Fourth Hospital,114.344693,30.601822,楼宇,328,Building
+B2094655D56EABFD449C,光谷银座, Optics Valley Ginza,114.39201,30.51143,楼宇,328,Building
+B2094655D46DA7FF489B,复兴新村小区, Fuxing Xincun Community,114.24552,30.60416,住宅区,324,Residential area
+B2094655D464AAFC429B,平安大厦, Ping An Building,114.2912,30.57877,楼宇,324,Building
+B2094655D56DABF5459B,华中师范大学(西门), Huazhong Normal University ( Simon ),114.35848,30.52129,高等院校,323,College
+B2094655D56DA3F9489F,武汉音乐学院(湖北省武昌实验小学西南)," Wuhan Conservatory of Music ( Southwest of Wuchang Experimental Primary School, Hubei Province )",114.29492,30.53825,高等院校,323,College
+B2094655D465A3F4459D,光谷商业中心, Optics Valley Commercial Center,114.39738,30.50748,楼宇,319,Building
+B2094655D46EA0FC4693,武汉市第一中学(常青一路), Wuhan No. 1 Middle School ( Evergreen all the way ),114.25857,30.62374,中学,313,Middle school
+B2094655D469A5FD419D,武汉市第十七中学, Wuhan No. 17 Middle School,114.22801,30.58053,中学,310,Middle school
+B2094655D56CA5F54493,江欣苑, Jiang Xin Court,114.2471,30.53056,住宅区,309,Residential area
+B2094655D465A2FC4799,武汉商业服务学院南二门, South Second Gate of Wuhan Business Service College,114.08647,30.45831,高等院校,309,College
+B2094757D564ABF9479A,福星惠誉水岸国际, Fuxing Fitch Waterfront International,114.323945,30.57161,住宅区,308,Residential area
+B2094655D465AAF84892,武汉市汉阳医院, Wuhan Hanyang Hospital,114.24461,30.54798,医院,307,Hospital
+B2094757D06BAAFA429B,关山中学, Guanshan Middle School,114.408875,30.496799,中学,306,Middle school
+B2094655D56CA6FA4293,青扬十街, Qingyang 10th Street,114.39962,30.63853,住宅区,305,Residential area
+B2094655D464A6F84392,长春观, Changchun View,114.32059,30.53983,寺庙道观,302,Temple
+B2094655D56EA6FE499F,省荣军医院, Provincial Invalids Hospital,114.3767,30.50518,医院,301,Hospital
+B2094757D565A7FE459A,佳源花都小区, Jiayuan Huadu Community,114.44611,30.477218,住宅区,297,Residential area
+B2094655D46CA2FE459F,黄陂购物广场, Huangpi Shopping Plaza,114.37233,30.88105,商场,296,shopping mall
+B2094757D565A5FF439A,汉口北国际商品交易中心, Hankou North International Commodity Trading Center,114.313946,30.699483,楼宇,294,Building
+B2094655D46FA4FA4799,福星国际商会大厦, Fuxing International Chamber of Commerce Building,114.27559,30.58848,楼宇,291,Building
+B2094757D068A6FB459A,湖北美术学院藏龙岛校区, Hubei Academy of Fine Arts Canglong Island Campus,114.416672,30.418026,高等院校,291,College
+B2094655D468ABFD419F,武汉市第四十九中学, Wuhan No. 49 Middle School,114.40606,30.64674,中学,289,Middle school
+B2094655D46BA1FC4398,万商·白马, Wanshang · white horse,114.28543,30.56711,商场,287,shopping mall
+B2094655D46DA0F5429D,武汉高尔夫城市花园, Wuhan Golf City Garden,114.21353,30.63877,住宅区,286,Residential area
+B2094757D06AA4F94099,长江日报社, Changjiang Daily,114.278771,30.603414,楼宇,284,Building
+B2094655D465A1F5429B,武汉科技大学黄家湖校区教一楼," 1st Floor, Huangjiahu Campus, Wuhan University of Science and Technology",114.2646,30.44057,高等院校,283,College
+B2094655D56CA3FF459C,家乐福超市(武胜路店), Carrefour ( Wusheng Road Store ),114.26892,30.56877,超级市场,283,supermarket
+B2094655D56DA3FA469A,武汉大学(西门), Wuhan University ( Simon),114.35462,30.53919,高等院校,281,College
+B2094655D56EA4FF409D,复地东湖国际, Forte East Lake International,114.34891,30.56306,住宅区,279,Residential area
+B2094655D464A1FB489A,武汉市东湖中学, Wuhan Donghu Middle School,114.36828,30.57482,中学,279,Middle school
+B2094655D56EABFF439D,中建康城, China Construction Cannes City,114.40868,30.47179,住宅区,276,Residential area
+B2094757D06FA4FC4192,新世界百货(中心店), new world department store ( center store ),114.265419,30.581169,商场,271,shopping mall
+B2094757D069A1F4409D,华中科技大学喻园小区, Huazhong University of Science and Technology Yuyuan Community,114.42553,30.515593,住宅区,270,Residential area
+B2094655D56CA4FB499F,金桥·港湾花园水木廷苑, Golden Bridge · Harbour Garden Shuimu Tingyuan,114.26171,30.52971,住宅区,269,Residential area
+B2094757D565A1FD449A,光谷时代广场, Optics Valley Times Square,114.413295,30.501675,楼宇,268,Building
+B2094655D56DA3FD469F,武汉理工大学鉴湖四教堂楼," Jianhu Fourth Church Building, Wuhan University of Technology",114.34629,30.51488,高等院校,265,College
+B2094757D069A6FE499D,银泰百货, Intime Department Store,114.333428,30.537339,商场,262,shopping mall
+B2094655D56DABF94998,武汉科技大学附属天佑医院, Tianyou Hospital Affiliated to Wuhan University of Science and Technology,114.32603,30.52446,医院,261,Hospital
+B2094655D465A3F54692,武汉工程大学科教大楼, Science and Education Building of Wuhan University of Technology,114.39029,30.49948,高等院校,259,College
+B2094655D464A6F4499C,家乐福洪山广场店, Carrefour Hongshan Plaza Store,114.33799,30.54817,超级市场,258,supermarket
+B2094655D468A2F9409C,湖北省新华医院, Hubei Xinhua Hospital,114.27379,30.60748,医院,256,Hospital
+B2094655D464A1FD429B,汉商大厦, Hanshang Building,114.26657,30.54912,楼宇,252,Building
+B2094655D465A7FD4393,佛祖岭社区, Fozuling Community,114.44568,30.43815,住宅区,251,Residential area
+B2094655D464A6FD429F,湖北省武昌实验中学, Hubei Wuchang Experimental Middle School,114.30328,30.55159,中学,249,Middle school
+B2094655D56CA2FC4593,湖北黄陂一中, Hubei Huangpi No.1 Middle School,114.36098,30.90297,中学,248,Middle school
+B2094655D465A3F84993,国光大厦, Guoguang Building,114.39973,30.51252,楼宇,248,Building
+B2094655D56DAAF4489B,协和医院外科楼, Union Hospital Surgery Building,114.27532,30.58315,医院,246,Hospital
+B2094757D068A4FF4592,大洋百货（江汉路店）, Dayang Department Store (Jianghan Road),114.288162,30.583044,商场,246,shopping mall
+B2094655D46DA6F94799,香缇美景, Shanti beauty,114.23056,30.61816,住宅区,245,Residential area
+B2094655D46BAAF5479F,学雅芳邻, Learn about Avonne,114.36559,30.5047,住宅区,245,Residential area
+B2094655D56CA3FE439A,中南国际城A座, Zhongnan International City A seat,114.33007,30.53393,楼宇,245,Building
+B2094655D46EA7FC4293,新地·东方明珠, new land · Pearl of the Orient,114.29843,30.63783,住宅区,242,Residential area
+B2094655D46AA3F9499A,武汉大学三环学生公寓, Wuhan University Third Ring Student Apartment,114.37429,30.52896,住宅区,241,Residential area
+B2094655D56CABFC4699,湖北大学一期学生公寓, Hubei University Phase I Student Housing,114.33745,30.57913,住宅区,240,Residential area
+B2094757D069A3FA4893,沃尔玛购物广场(徐东销品茂店), Walmart Supercenter ( Xudong Pinmao Store ),114.343002,30.58835,便民商店/便利店,239,Convenience Store/Convenience Store
+B2094655D46CA2FE469D,黄陂区人民医院, Huangpi District People's Hospital,114.37635,30.87265,医院,238,Hospital
+B2094655D56CA2FC4999,武汉大学外国语言文学学院," School of Foreign Languages and Literature, Wuhan University",114.37112,30.53904,高等院校,236,College
+B2094757D069A2FD4392,武汉市第二中学, Wuhan No. 2 Middle School,114.30835,30.60601,中学,234,Middle school
+B2094655D46DA6FA4598,常青花园四小区(南门), Evergreen Garden No. 4 Community( South Gate ),114.23773,30.64577,住宅区,233,Residential area
+B2094655D464A5FF499B,湖北省水果湖高级中学, Hubei Province Fruit Lake Senior High School,114.34676,30.54952,中学,233,Middle school
+B2094655D46DA6F8499B,香港映象, Hong Kong image,114.21541,30.58791,住宅区,231,Residential area
+B2094757D06AA6F4479D,中百仓储(珞狮路购物广场店), Zhongbai Warehousing ( Luoshi Road Shopping Plaza Store ),114.349847,30.514114,便民商店/便利店,231,Convenience Store/Convenience Store
+B2094655D469A6F8429E,人信·奥林花园, people believe · Olin Garden,114.18183,30.50963,住宅区,230,Residential area
+B2094655D469A7FD409D,武汉血液中心, Wuhan Blood Center,114.25317,30.58014,医院,227,Hospital
+B2094655D46CA2FD4099,黄陂区第二中学, Huangpi District No. 2 Middle School,114.23992,31.01807,中学,223,Middle school
+B2094655D56EABFA489D,万景国际, Wanjing International,114.26209,30.60344,住宅区,223,Residential area
+B2094757D16CA4FF429C,协和医院西区, Union Hospital West District,114.17349,30.4919,医院,223,Hospital
+B2094757DA69A7F8469A,武汉王家湾摩尔城, Wuhan Wangjiawan Moore City,114.20835,30.55882,商场,223,shopping mall
+B2094655D469A6FF469D,东方夏威夷国际花园, Oriental Hawaii International Garden,114.13784,30.51647,住宅区,221,Residential area
+B2094655D56DABFC4992,武汉市第六医院(江汉大学附属医院), Wuhan Sixth Hospital ( Affiliated Hospital of Jianghan University ),114.2897,30.60015,医院,220,Hospital
+B2094655D56DA7F4439C,江山如画, Picturesque,114.26457,30.56444,住宅区,219,Residential area
+B2094655D56EABFA419B,大洋百货(武汉光谷店), Ocean Department Store ( Wuhan Optics Valley Store ),114.39869,30.49921,商场,218,shopping mall
+B2094655D464AAFA4092,名都花园(湖北省旅游学校西南), Mingdu Garden ( Southwest of Hubei Provincial Tourism School ),114.3699,30.5038,住宅区,215,Residential area
+B2094655D46DA2F5449F,东方花城, Oriental Flower City,114.20086,30.59012,住宅区,214,Residential area
+B2094655D465A7FD409E,武汉枫叶国际学校, Wuhan Maple Leaf International School,114.38597,30.44853,中学,214,Middle school
+B2094655D46FAAFE449D,华中科技大学同济医学院医院, Huazhong University of Science and Technology Tongji Medical College Hospital,114.25993,30.58569,医院,214,Hospital
+B2094655D468A1F4429A,万科, Vanke,114.29285,30.59544,住宅区,213,Residential area
+B2094757D069A7FF499E,武汉大学茶港小区, Wuhan University Chagang Community,114.354305,30.539242,住宅区,213,Residential area
+B2094655D56EABFB479E,百瑞景中央生活区, Bairui King Central Living Area,114.33946,30.52875,住宅区,212,Residential area
+B2094655D469A5FA439F,汉商集团21购物中心(龙阳大道), Hanshang Group twenty one shopping center ( Longyang Avenue ),114.20976,30.56003,商场,209,shopping mall
+B2094655D46FABFE409B,中国移动通信武汉移动综合大楼, China Mobile Communications Wuhan Mobile Complex,114.25649,30.61409,楼宇,209,Building
+B2094757D06BA6FE429B,华中师范大学七号楼," Building 7, Central China Normal University",114.367592,30.514828,高等院校,209,College
+B2094655D465A0F5499F,金地太阳城, Gemdale Sun City,114.41162,30.49059,住宅区,207,Residential area
+B2094655D469A5FD489A,武汉市第二十六中学, Wuhan No. 26 Middle School,114.24537,30.57613,中学,207,Middle school
+B2094757D06AABF4479A,华罗利广场, Warrare Plaza,114.399233,30.48398,商场,207,shopping mall
+B2094757D564ABF54598,金地·格林春岸, Gemdale · Green Spring Bank,114.194362,30.628539,住宅区,206,Residential area
+B2094757D069A4FC469F,水深56m,water depth 56m,114.308208,30.552553,酒吧,204,bar
+B2094655D464A1F9449A,2008新长江广场, 2008 New Yangtze Plaza,114.31813,30.55288,楼宇,202,Building
+B2094757D06BA1F8429F,武汉市第十一中学, Wuhan No. 11 Middle School,114.260535,30.574556,中学,202,Middle school
+B2094655D56CA3F4459F,武汉软件工程职业学院(北门), Wuhan Software Engineering Vocational College ( North Gate ),114.42921,30.45013,高等院校,201,College
+B2094655D56DA0FC479C,烽火村, beacon fire village,114.29862,30.51115,住宅区,200,Residential area
+B2094655D46BABF44393,湖北省肿瘤医院, Hubei Cancer Hospital,114.36589,30.50167,医院,199,Hospital
+B2094655D464A4F8449D,银海雅苑, Silver Sea Court,114.36445,30.52672,住宅区,198,Residential area
+B2094655D46CAAFF439E,武汉市东西湖区人民医院, Wuhan Dongxihu District People's Hospital,114.13316,30.62587,医院,197,Hospital
+B2094655D464A7FD4693,东湖天下, East Lake World,114.37243,30.57599,住宅区,196,Residential area
+B2094655D46EA1F4489B,武钢钢花新村121小区, WISCO Ganghua New Village 121 community,114.37509,30.6168,住宅区,195,Residential area
+B2094757D16DA1F54493,中国地质大学江城学院西门," West Gate of Jiangcheng College, China University of Geosciences",114.335335,30.348884,高等院校,194,College
+B2094655D465A0FD4598,武汉职业技术学院西区, West District of Wuhan Vocational and Technical College,114.41021,30.48606,高等院校,192,College
+B2094757D565A1FD449C,武汉工程职业技术学院江北校区, Jiangbei Campus of Wuhan Engineering Vocational and Technical College,114.544582,30.706861,高等院校,192,College
+B2094655D56EA0F8499B,美加湖滨新城, Lakeside New City,114.37248,30.39077,住宅区,192,Residential area
+B2094757D16CA0FD419B,武汉市第十一医院, Wuhan No. 1 Hospital,114.273132,30.613779,医院,191,Hospital
+B2094655D464A5F84099,水果湖广场, Fruit Lake Plaza,114.34452,30.54789,楼宇,191,Building
+B2094655D56CA1F4419E,江南春城, Jiangnan Spring City,114.3804,30.6285,住宅区,190,Residential area
+B2094655D468A1F54098,武汉市育才高中, Wuhan Yucai High School,114.29966,30.60365,中学,190,Middle school
+B2094757D564A4FF499C,保利海上五月花, Poly sea Mayflower,114.376171,30.408182,住宅区,189,Residential area
+B2094655D46EA1F54493,武汉市第九医院, Wuhan Ninth Hospital,114.38032,30.62415,医院,189,Hospital
+B2094655D464A6FC4498,假日乐园购物中心, Holiday Park Shopping Center,114.29969,30.54699,商场,189,shopping mall
+B2094655D46BAAFD4292,长江崇文广场, Yangtze River Chongwen Square,114.34246,30.51065,商场,189,shopping mall
+B2094655D464AAFA4093,绿汀雅境, Green and elegant,114.37216,30.50137,住宅区,188,Residential area
+B2094655D56CA7F8499E,美林青城, Merrill Lynch Qingcheng,114.3537,30.59353,住宅区,187,Residential area
+B2094655D56DA7FB459E,中大长江紫都, CUHK Yangtze River Purple Capital,114.2895,30.51477,住宅区,186,Residential area
+B2094655D56CA4F54192,美奇国际, Meiqi International,114.27715,30.57292,楼宇,186,Building
+B2094757D069A5FF4992,家乐福(二七店), Carrefour ( Erqidian ),114.316208,30.62421,便民商店/便利店,186,Convenience Store/Convenience Store
+B2094757D06AA4F44293,家乐福(十升店), Carrefour ( Shishengdian ),114.211647,30.561029,超级市场,186,supermarket
+B2094757D565A7FF4099,光谷国际, Optics Valley International,114.430036,30.504692,楼宇,184,Building
+B2094655D465A0FF439B,中南财经政法大学临湖公寓, Lakeside Apartment of Zhongnan University of Economics and Law,114.39064,30.4722,住宅区,183,Residential area
+B2094655D46CA7FB4599,日月山水(巨龙大道), Sun and Moon Landscape ( Dragon Avenue ),114.30133,30.69625,住宅区,183,Residential area
+B2094655D46DA2FF4392,丰竹园, Fengzhuyuan,114.23767,30.61017,住宅区,182,Residential area
+B2094655D468A1F84199,统建大江园南苑, Tongjian Dajiang Garden Nanyuan,114.29322,30.61691,住宅区,181,Residential area
+B2094757D564AAF9439B,新地·盛世东方,new land · Prosperity East,114.300881,30.638019,住宅区,180,Residential area
+B2094655D56CA6FE499A,泰兴里, Taehung-ri,114.30067,30.58935,住宅区,179,Residential area
+B2094655D56DA6FF429F,凯旋名邸, Triumph Mansion,114.31898,30.52368,住宅区,178,Residential area
+B2094655D469A5FB449F,玫瑰苑, rose garden,114.20304,30.56672,住宅区,178,Residential area
+B2094655D468A0FC459A,武汉市第六中学(球场路), Wuhan No. 6 Middle School ( Stadium Road ),114.29183,30.60276,中学,178,Middle school
+B2094655D56CA2FC4899,同济学子苑, Tongji Student Garden,114.259137,30.581718,高等院校,175,College
+B2094655D46EA6FE409E,长江航运总医院(惠济路), Changjiang Shipping General Hospital ( Huiji Road ),114.28759,30.60642,医院,175,Hospital
+B2094655D465A7FF4293,江夏区第一人民医院, The First People's Hospital of Jiangxia District,114.31557,30.34794,医院,174,Hospital
+B2094655D56CA6FA459D,武汉市钢城第四中学, Wuhan Gangcheng No. 4 Middle School,114.39434,30.63435,中学,173,Middle school
+B2094655D464AAFE469A,都市兰亭, Urban Lanting,114.26818,30.55066,住宅区,173,Residential area
+B2094655D469A6FF4692,潮海公寓, Chaohai Apartment,114.15622,30.52246,住宅区,173,Residential area
+B2094655D465A1FE489F,海天大厦, Haitian Building,114.31228,30.41907,楼宇,173,Building
+B2094655D464A1FF459E,尚隆地球村, Shanglong Global Village,114.31436,30.55781,住宅区,172,Residential area
+B2094655D46EABFF4098,华氏百货, Fahrenheit,114.28331,30.60643,商场,170,shopping mall
+B2094757D565A5FC439B,武汉天河机场综合楼, Wuhan Tianhe Airport Complex,114.220215,30.777736,楼宇,170,Building
+B2094655D56CA7F5479E,东立国际(四号门), Dongli International ( door number four ),114.31047,30.62423,住宅区,169,Residential area
+B2094655D46EA1FA4399,绿景苑, Green View Court,114.37303,30.60763,住宅区,169,Residential area
+B2094655D46DA3F8499F,华安里社区, Huaanli Community,114.2432,30.61905,住宅区,169,Residential area
+B2094757D565A0F94698,爱尚98 Bar, love 98 Bar,114.352436,30.52504,酒吧,169,bar
+B2094757D565A5FE4498,锦绣江南, Splendid Jiangnan,114.358942,30.563302,住宅区,168,Residential area
+B2094655D46EA7FC419F,幸福人家, happy family,114.29656,30.64461,住宅区,168,Residential area
+B2094655D56CAAFD4293,金都汉宫, Jinduhan Palace,114.30344,30.55786,住宅区,168,Residential area
+B2094655D56DA5F8429F,浦发银行大厦, Shanghai Pudong Development Bank Building,114.27457,30.59066,楼宇,168,Building
+B2094655D56DA5FE4398,武汉大学信息学部(北二门)," Department of Informatics, Wuhan University ( North Second Gate )",114.36013,30.53168,高等院校,168,College
+B2094655D56CA2F4489D,同成广场, Tongcheng Plaza,114.26565,30.59376,楼宇,167,Building
+B2094655D46EA0FB4993,田园商务大厦, Pastoral Business Building,114.27537,30.62019,楼宇,167,Building
+B2094757D565A0FD469B,卡迪亚公馆, Cadia Mansion,114.383216,30.479173,住宅区,167,Residential area
+B2094655D56CA6F44893,武汉民族商厦, Wuhan Ethnic Commercial Building,114.28774,30.57638,楼宇,167,Building
+B2094655D56CA2FB489D,天勤花园, Tianqin Garden,114.19097,30.60838,住宅区,165,Residential area
+B2094655D56CABF84393,凤凰城, Phoenix city,114.30918,30.55716,住宅区,164,Residential area
+B2094655D46DA7FE439D,武汉科技大厦, Wuhan Science and Technology Building,114.25035,30.61199,楼宇,164,Building
+B2094655D56CA1F84992,云鹤小区, Yunhe Community,114.22111,30.60246,住宅区,163,Residential area
+B2094655D464A1FC479B,武汉三中(拦江路), Wuhan No. 3 Middle School ( Block River Road ),114.27143,30.54479,中学,161,Middle school
+B2094757D16FA0F9439B,东风汽车公司, Dongfeng Motor Corporation,114.164179,30.5019,楼宇,161,Building
+B2094655D56DABF54392,湖北艺术职业学院(北门), Hubei Art Vocational College ( North Gate ),114.34688,30.52814,高等院校,160,College
+B2094655D56CAAFD4492,武昌城市公园, Wuchang City Park,114.3206,30.5257,住宅区,160,Residential area
+B2094655D46DA7FC419F,沿海丽水佳园,Coastal Lishui Garden,114.22654,30.64994,住宅区,159,Residential area
+B2094655D56DA3FD439D,水陆小区, Water and land area,114.29737,30.5308,住宅区,159,Residential area
+B2094655D464A6FA489F,中商广场购物中心, China Business Plaza Shopping Center,114.33197,30.53632,商场,159,shopping mall
+B2094655D465A0FC499A,武汉大学东湖分校教二楼," Second Floor, Wuhan University East Lake Campus",114.31885,30.42181,高等院校,158,College
+B2094655D56CA7F54399,佳园小区(解放大道), Jiayuan Community ( Liberation Avenue ),114.33417,30.65064,住宅区,157,Residential area
+B2094655D56CA2FA449C,中石油大厦, PetroChina Building,114.23929,30.62445,楼宇,157,Building
+B2094655D56CA6FE489F,华清园, Huaqing Garden,114.3021,30.5968,住宅区,155,Residential area
+B2094655D469A6FA4593,宝丰时代, Baofeng Times,114.25375,30.57833,楼宇,155,Building
+B2094655D46CAAFE4793,碧海花园, Bihai Garden,114.19732,30.64866,住宅区,155,Residential area
+B2094655D56DABFB489B,江汉大学汉口校区(球场路), Jianghan University Hankou Campus ( Stadium Road ),114.29077,30.60151,高等院校,154,College
+B2094655D46DA0F5499E,常青公寓, Evergreen Apartments,114.24586,30.64024,住宅区,153,Residential area
+B2094655D46EA2FF479B,怡和苑, Yihe Court,114.31126,30.64239,住宅区,153,Residential area
+B2094655D465A2FC449D,武汉商业服务学院(薛峰社区西门西南)," Wuhan Business Service College ( Southwest of Ximen, Xuefeng Community )",114.08792,30.4564,高等院校,153,College
+B2094655D56CA4FB4592,世茂锦绣长江二期, Shimao Splendid Yangtze River Phase II,114.27279,30.53969,住宅区,152,Residential area
+B2094655D56DAAFA489D,滨湖社区, Lakeside Community,114.1458,30.48665,住宅区,152,Residential area
+B2094757D068A2F84598,家乐福(光谷店), Carrefour ( Optics Valley Store ),114.400902,30.50565,超级市场,152,supermarket
+B2094655D46DA6FC449D,天梨豪园, Tianli Mansion,114.24951,30.61346,住宅区,150,Residential area
+B2094655D468A4F9419D,武汉科技大学外语外事职业学院, Wuhan University of Science and Technology Vocational College of Foreign Languages and Foreign Affairs,114.42843,30.58805,高等院校,150,College
+B2094655D469A6FF4992,水木清华, Shuimu Tsinghua,114.15426,30.50685,住宅区,149,Residential area
+B2094655D468AAFE4098,临江港湾, Linjiang Harbor,114.41232,30.65163,住宅区,149,Residential area
+B2094757D068ABFE4298,华中科技大学南大门, South Gate of Huazhong University of Science and Technology,114.413554,30.507247,高等院校,149,College
+B2094655D465A5F8409C,武昌铁路医院, Wuchang Railway Hospital,114.34255,30.60214,医院,148,Hospital
+B2094655D56DA4F8409B,柏龙Bar, Bailong Bar,114.30102,30.58349,酒吧,148,bar
+B2094655D465A3F8449C,湖北信息产业科技大厦(珞喻路), Hubei Information Industry Technology Building ( Luo Yulu ),114.3922,30.51164,楼宇,147,Building
+B2094655D464ABFE4892,沈家湾花园小区, Shenjiawan Garden Community,114.33032,30.51855,住宅区,145,Residential area
+B2094655D56DA6F8439B,凤凰花园, Phoenix Garden,114.42339,30.44083,住宅区,145,Residential area
+B2094655D465A0F5459E,中南民族大学10号教学楼, South Central University for Nationalities 10 Teaching Building No.,114.39228,30.49052,高等院校,145,College
+B2094655D464A2FE489D,中央花园, central garden,114.31684,30.51101,住宅区,145,Residential area
+B2094757D565A2FD499C,湖北艺术职业学院(虎泉街), Hubei Art Vocational College ( Tiger Spring Street ),114.371485,30.510767,高等院校,143,College
+B2094757D564A6FE4898,统建·东方雅园, unified construction · Oriental Graceland,114.397335,30.612119,住宅区,142,Residential area
+B2094655D46CA7FA4592,锦湖花园, Kumho Garden,114.34467,30.66473,住宅区,142,Residential area
+B2094655D46CA2FE4493,武汉市黄陂区实验中学,Wuhan Huangpi District Experimental Middle School,114.38054,30.87131,中学,142,Middle school
+B2094655D464A6F94698,中商广场写字楼, China Business Plaza Office Building,114.33171,30.53594,楼宇,142,Building
+B2094757D565A0FD4292,江南家园小区, Jiangnan Home Community,114.395831,30.480663,住宅区,141,Residential area
+B2094655D56EA7F9479E,武警医院, Armed Police Hospital,114.31306,30.54397,医院,141,Hospital
+B2094655D46EA0F94392,丝宝国际大厦, Sibao International Building,114.29274,30.62246,楼宇,141,Building
+B2094655D465A0FD499B,中南财经政法大学弘博环湖学生公寓, Zhongnan University of Economics and Law Hongbo Huanhu Student Apartment,114.38191,30.4744,住宅区,141,Residential area
+B2094655D464A5F4409E,中南大厦, Zhongnan Building,114.33583,30.54195,楼宇,141,Building
+B2094757D06AA7F8419D,家乐福(钟家村店), Carrefour ( Zhongjia Village Store ),114.265778,30.549829,便民商店/便利店,141,Convenience Store/Convenience Store
+B2094757D164ABFA4292,空军医院, Air Force Hospital,114.306549,30.619749,医院,140,Hospital
+B2094655D46DA7F5469D,天泽一方, Amazawa side,114.21758,30.60595,住宅区,138,Residential area
+B2094655D56CA3FF419D,东亭小区, Dongting Community,114.35797,30.56727,住宅区,137,Residential area
+B2094655D56EA4F9469B,关南社区, Guannan Community,114.43262,30.47794,住宅区,137,Residential area
+B2094750DB6EAAF8469A,狮城名居, lion city residence,114.350341,30.509035,住宅区,137,Residential area
+B2094655D468A4F4479D,武钢三中, Wuhan Iron and Steel Third Middle School,114.39047,30.63912,中学,137,Middle school
+B2094655D46EA0F4439D,中百仓唐家墩购物广场(唐家墩路), Zhongbaichang Tangjiadun Shopping Plaza ( Tangjiadun Road ),114.27072,30.62038,商场,137,shopping mall
+B2094655D56EA2FA4098,纳帕溪谷, Napa Valley,114.41669,30.41803,住宅区,136,Residential area
+B2094757D16FA2FB409F,武汉外国语学校, Wuhan Foreign Language School,114.269092,30.583928,中学,135,Middle school
+B2094655D56CA4FE479D,宝利金国际广场B座, Poly Gold International Plaza B seat,114.29257,30.5761,楼宇,135,Building
+B2094757D564A7FB489D,泰然南湖玫瑰湾, Tairan South Lake Rose Bay,114.343433,30.487581,住宅区,134,Residential area
+B2094655D56DAAFC439A,武汉奥林匹克花园, Wuhan Olympic Garden,114.20958,30.67289,住宅区,134,Residential area
+B2094655D56CA3FB419D,汉口上海路天主堂, Hankou Shanghai Road Catholic Church,114.29576,30.58023,教堂,134,church
+B2094757D565A1F4419C,新洲二中, Xinzhou No. 2 Middle School,114.599774,30.830478,中学,134,Middle school
+B2094752D46AA2F8449E,新世界百货(桥口店), new world department store ( Qiaokoudian ),114.272775,30.58567,商场,134,shopping mall
+B2094655D464AAFF489F,芳卉园, Fanghui Garden,114.26216,30.52807,住宅区,132,Residential area
+B2094655D46CAAF94292,嘉禾园, Golden Harvest Garden,114.15364,30.62337,住宅区,132,Residential area
+B2094655D56EA7FE4399,中百写字楼, Zhongbai Office Building,114.28957,30.58195,楼宇,132,Building
+B2094655D56DAAFA419C,卧龙剑桥春天, Wolong Cambridge Spring,114.41704,30.50656,住宅区,132,Residential area
+B2094655D46FAAF4469A,建银大厦, CCB Building,114.27108,30.59685,楼宇,132,Building
+B2094655D469A6FA449A,同馨花园, Tongxin Garden,114.25459,30.57649,住宅区,131,Residential area
+B2094655D465A0FC449E,华中师范大学华大家园, Huayuan Home of Central China Normal University,114.33872,30.48468,住宅区,131,Residential area
+B2094655D56DABFC409A,武汉市钢都中学, Wuhan Gangdu Middle School,114.3672,30.61199,中学,131,Middle school
+B2094655D56CA5FC409E,鹦鹉花园, Parrot Garden,114.27447,30.54303,住宅区,131,Residential area
+B2094757D16EABF84398,波尔图酒吧, Porto Bar,114.300301,30.58145,酒吧,131,bar
+B2094757D564A7F54299,武汉市第二十三中学(汉阳区人民政府西), Wuhan No. 23 Middle School ( Hanyang District People's Government West ),114.217371,30.554731,中学,130,Middle school
+B2094655D464A6F8429A,武昌区昙华林小学,"Tanhualin Primary School, Wuchang District",114.30673,30.55315,小学,130,primary school
+B2094655D465AAF54198,汉正街中心商城, Hanzheng Street Center Mall,114.27708,30.56748,商场,129,shopping mall
+B2094757D56DAAF4439D,武汉国广二期, Wuhan Guoguang Phase II,114.270526,30.58117,商场,129,shopping mall
+B2094655D46CAAF94298,富丽雅花园, Fuliya Garden,114.15293,30.62258,住宅区,128,Residential area
+B2094655D465A1FF419C,华中师范大学汉口分校北大门, North Gate of Central China Normal University Hankou Branch,114.3169,30.41885,高等院校,128,College
+B2094655D56CA7FC459C,湖北省电力岳家嘴小区, Hubei Electric Power Yuejiazui Community,114.36642,30.58135,住宅区,128,Residential area
+B2094655D468AAF5429D,汉阳区第一中学, Hanyang District No. 1 Middle School,114.0163,30.57711,中学,128,Middle school
+B2094655D56DAAFD429A,江汉大学艺术学院, Jianghan University School of Art,114.1669,30.51877,高等院校,128,College
+B2094655D465A3F84092,烽火科技大厦, FiberHome Technology Building,114.39153,30.51299,楼宇,128,Building
+B2094655D465A7FF4498,武汉市江夏实验高中, Wuhan Jiangxia Experimental High School,114.32305,30.34157,中学,127,Middle school
+B2094655D46FA4FA4792,民生大厦, Minsheng Building,114.27328,30.59422,楼宇,127,Building
+B2094655D56CABFB4398,湖北省基督教感恩堂, Hubei Christian Thanksgiving Church,114.30764,30.54635,教堂,127,church
+B2094655D465A1FE4099,湖北水利水电职业技术学院(武汉禹通驾驶培训学校西南), Hubei Vocational and Technical College of Water Resources and Hydropower ( Southwest of Wuhan Yutong Driving Training School ),114.33905,30.49142,高等院校,127,College
+B2094750D16BA4FB4992,广州军区武汉总医院, Wuhan General Hospital of Guangzhou Military Region,114.344963,30.531332,医院,126,Hospital
+B2094655D46FA4F8409D,九运大厦, Jiuyun Building,114.27916,30.58961,楼宇,125,Building
+B2094655D46CAAFE499F,将军花园, General Garden,114.25007,30.65002,住宅区,124,Residential area
+B2094655D46FAAFE4399,中国地质大学汉口校区, China University of Geosciences Hankou Campus,114.2592,30.58608,高等院校,124,College
+B2094655D464A4FA429A,阜华大厦, Fuhua Building,114.35365,30.52604,楼宇,124,Building
+B2094655D468A0FE459D,武汉十六中, Wuhan No. 16 Middle School,114.3007,30.59396,中学,123,Middle school
+B2094655D464AAF9449E,华锦花园, Huajin Garden,114.31763,30.50407,住宅区,123,Residential area
+B2094655D464A5F94798,湖北科教大厦, Hubei Science and Education Building,114.33901,30.54442,楼宇,123,Building
+B2094757D564A6F4429F,湖北美术学院艺术设计学院," School of Art and Design, Hubei Academy of Fine Arts",114.409734,30.400856,高等院校,123,College
+B2094655D56CABFF429D,世纪彩城, Century Color City,114.35675,30.57218,住宅区,122,Residential area
+B2094655D56CABFF469A,都市经典, urban classic,114.35523,30.58033,住宅区,122,Residential area
+B2094655D46FAAFE4698,华中科技大学(航空路), Huazhong University of Science and Technology ( air road ),114.26228,30.58255,高等院校,122,College
+B2094757D16EA6F44098,武汉市体育馆, Wuhan Gymnasium,114.26149,30.578147,运动场所,122,Sports place
+B2094655D46FAAF44992,汉口文化体育中心, Hankou Culture and Sports Center,114.26959,30.60149,综合体育馆,122,Comprehensive Stadium
+B2094655D46CA0FC459E,新洲区第一中学, Xinzhou District No. 1 Middle School,114.81509,30.84664,中学,122,Middle school
+B2094655D464AAF9459E,基督教圣米迦勒堂, christian saint michael church,114.30197,30.52944,教堂,121,church
+B2094655D56DA5FD4192,武汉大学第10教学楼, Wuhan University No. 1 10 teaching building,114.36083,30.54417,高等院校,121,College
+B2094757D169A4F94699,武汉市第八医院, Wuhan Eighth Hospital,114.305737,30.603523,医院,121,Hospital
+B2094757D069A6FD4898,家乐福(建设店), Carrefour ( construction shop),114.285698,30.60655,超级市场,121,supermarket

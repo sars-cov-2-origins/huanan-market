@@ -1,0 +1,1169 @@
+---
+title: "spatial_analysis"
+output: html_document
+---
+ 
+```{r}
+library(sf)
+library(maptools)
+library(raster)
+library(spatstat)
+library(readxl)
+library(janitor)
+library(sf)
+library(ggplot2)
+library(dplyr)
+library(leaflet)
+library(rgdal)
+library(geosphere)
+library(magrittr)
+
+
+
+```
+
+```{r}
+wuhan <- readShapePoly("../maps/shapefile/wuhan-boundary.shp")
+#80+ age group
+pop_80_m<-raster("../maps/Geotiff/pop_80_m_wuhan.tif")
+pop_80_f<-raster("../maps/Geotiff/pop_80_f_wuhan.tif")
+#70-80 age group
+pop_75_m<-raster("../maps/Geotiff/pop_75_m_wuhan.tif")
+pop_75_f<-raster("../maps/Geotiff/pop_75_f_wuhan.tif")
+pop_70_m<-raster("../maps/Geotiff/pop_70_m_wuhan.tif")
+pop_70_f<-raster("../maps/Geotiff/pop_70_f_wuhan.tif")
+#60-70 age group
+pop_65_m<-raster("../maps/Geotiff/pop_65_m_wuhan.tif")
+pop_65_f<-raster("../maps/Geotiff/pop_65_f_wuhan.tif")
+pop_60_m<-raster("../maps/Geotiff/pop_60_m_wuhan.tif")
+pop_60_f<-raster("../maps/Geotiff/pop_60_f_wuhan.tif")
+#50-60 age group
+pop_55_m<-raster("../maps/Geotiff/pop_55_m_wuhan.tif")
+pop_55_f<-raster("../maps/Geotiff/pop_55_f_wuhan.tif")
+pop_50_m<-raster("../maps/Geotiff/pop_50_m_wuhan.tif")
+pop_50_f<-raster("../maps/Geotiff/pop_50_f_wuhan.tif")
+#40-50 age group
+pop_45_m<-raster("../maps/Geotiff/pop_45_m_wuhan.tif")
+pop_45_f<-raster("../maps/Geotiff/pop_45_f_wuhan.tif")
+pop_40_m<-raster("../maps/Geotiff/pop_40_m_wuhan.tif")
+pop_40_f<-raster("../maps/Geotiff/pop_40_f_wuhan.tif")
+#30-40 age group
+pop_35_m<-raster("../maps/Geotiff/pop_35_m_wuhan.tif")
+pop_35_f<-raster("../maps/Geotiff/pop_35_f_wuhan.tif")
+pop_30_m<-raster("../maps/Geotiff/pop_30_m_wuhan.tif")
+pop_30_f<-raster("../maps/Geotiff/pop_30_f_wuhan.tif")
+#20-30 age group
+pop_25_m<-raster("../maps/Geotiff/pop_25_m_wuhan.tif")
+pop_25_f<-raster("../maps/Geotiff/pop_25_f_wuhan.tif")
+pop_20_m<-raster( "../maps/Geotiff/pop_20_m_wuhan.tif")
+pop_20_f<-raster("../maps/Geotiff/pop_20_f_wuhan.tif")
+
+
+#80+
+pop_80_f<-as.im(pop_80_f)
+pop_80_m<-as.im(pop_80_m)
+pop_80_m_df<-as.data.frame(pop_80_m)
+pop_80_f_df<-as.data.frame(pop_80_f)
+#70-80
+pop_75_f<-as.im(pop_75_f)
+pop_75_m<-as.im(pop_75_m)
+pop_75_m_df<-as.data.frame(pop_75_m)
+pop_75_f_df<-as.data.frame(pop_75_f)
+pop_70_f<-as.im(pop_70_f)
+pop_70_m<-as.im(pop_70_m)
+pop_70_m_df<-as.data.frame(pop_70_m)
+pop_70_f_df<-as.data.frame(pop_70_f)
+#60-70
+pop_65_f<-as.im(pop_65_f)
+pop_65_m<-as.im(pop_65_m)
+pop_65_m_df<-as.data.frame(pop_65_m)
+pop_65_f_df<-as.data.frame(pop_65_f)
+pop_60_f<-as.im(pop_60_f)
+pop_60_m<-as.im(pop_60_m)
+pop_60_m_df<-as.data.frame(pop_60_m)
+pop_60_f_df<-as.data.frame(pop_60_f)
+#50-60
+pop_55_f<-as.im(pop_55_f)
+pop_55_m<-as.im(pop_55_m)
+pop_55_m_df<-as.data.frame(pop_55_m)
+pop_55_f_df<-as.data.frame(pop_55_f)
+pop_50_f<-as.im(pop_50_f)
+pop_50_m<-as.im(pop_50_m)
+pop_50_m_df<-as.data.frame(pop_50_m)
+pop_50_f_df<-as.data.frame(pop_50_f)
+#40-50
+pop_45_f<-as.im(pop_45_f)
+pop_45_m<-as.im(pop_45_m)
+pop_45_m_df<-as.data.frame(pop_45_m)
+pop_45_f_df<-as.data.frame(pop_45_f)
+pop_40_f<-as.im(pop_40_f)
+pop_40_m<-as.im(pop_40_m)
+pop_40_m_df<-as.data.frame(pop_40_m)
+pop_40_f_df<-as.data.frame(pop_40_f)
+#30-40
+pop_35_f<-as.im(pop_35_f)
+pop_35_m<-as.im(pop_35_m)
+pop_35_m_df<-as.data.frame(pop_35_m)
+pop_35_f_df<-as.data.frame(pop_35_f)
+pop_30_f<-as.im(pop_30_f)
+pop_30_m<-as.im(pop_30_m)
+pop_30_m_df<-as.data.frame(pop_30_m)
+pop_30_f_df<-as.data.frame(pop_30_f)
+#20-30
+pop_25_f<-as.im(pop_25_f)
+pop_25_m<-as.im(pop_25_m)
+pop_25_m_df<-as.data.frame(pop_25_m)
+pop_25_f_df<-as.data.frame(pop_25_f)
+pop_20_f<-as.im(pop_20_f)
+pop_20_m<-as.im(pop_20_m)
+pop_20_m_df<-as.data.frame(pop_20_m)
+pop_20_f_df<-as.data.frame(pop_20_f)
+
+
+
+rm(pop_20_f)
+rm(pop_20_m)
+rm(pop_25_f)
+rm(pop_25_m)
+rm(pop_30_f)
+rm(pop_30_m)
+rm(pop_35_f)
+rm(pop_35_m)
+rm(pop_40_f)
+rm(pop_40_m)
+rm(pop_45_f)
+rm(pop_45_m)
+rm(pop_50_f)
+rm(pop_50_m)
+rm(pop_55_f)
+rm(pop_55_m)
+rm(pop_60_f)
+rm(pop_60_m)
+rm(pop_65_f)
+rm(pop_65_m)
+rm(pop_70_f)
+rm(pop_70_m)
+rm(pop_75_f)
+rm(pop_75_m)
+rm(pop_80_f)
+rm(pop_80_m)
+
+```
+
+```{r}
+#Compare if x y coords are the same
+comp_80x<-ifelse(pop_80_f_df$x==pop_80_m_df$x,"Yes","No")
+comp_80y<-ifelse(pop_80_f_df$y==pop_80_m_df$y,"Yes","No")
+length(which(comp_80x=="Yes"))
+length(which(comp_80y=="Yes"))
+
+comp_75x<-ifelse(pop_75_f_df$x==pop_75_m_df$x,"Yes","No")
+comp_75y<-ifelse(pop_75_f_df$y==pop_75_m_df$y,"Yes","No")
+length(which(comp_75x=="Yes"))
+length(which(comp_75y=="Yes"))
+comp_70x<-ifelse(pop_70_f_df$x==pop_70_m_df$x,"Yes","No")
+comp_70y<-ifelse(pop_70_f_df$y==pop_70_m_df$y,"Yes","No")
+length(which(comp_70x=="Yes"))
+length(which(comp_70y=="Yes"))
+
+comp_65x<-ifelse(pop_65_f_df$x==pop_65_m_df$x,"Yes","No")
+comp_65y<-ifelse(pop_65_f_df$y==pop_65_m_df$y,"Yes","No")
+length(which(comp_65x=="Yes"))
+length(which(comp_65y=="Yes"))
+comp_60x<-ifelse(pop_60_f_df$x==pop_60_m_df$x,"Yes","No")
+comp_60y<-ifelse(pop_60_f_df$y==pop_60_m_df$y,"Yes","No")
+length(which(comp_60x=="Yes"))
+length(which(comp_60y=="Yes"))
+
+comp_55x<-ifelse(pop_55_f_df$x==pop_55_m_df$x,"Yes","No")
+comp_55y<-ifelse(pop_55_f_df$y==pop_55_m_df$y,"Yes","No")
+length(which(comp_55x=="Yes"))
+length(which(comp_55y=="Yes"))
+comp_50x<-ifelse(pop_50_f_df$x==pop_50_m_df$x,"Yes","No")
+comp_50y<-ifelse(pop_50_f_df$y==pop_50_m_df$y,"Yes","No")
+length(which(comp_50x=="Yes"))
+length(which(comp_50y=="Yes"))
+
+comp_45x<-ifelse(pop_45_f_df$x==pop_45_m_df$x,"Yes","No")
+comp_45y<-ifelse(pop_45_f_df$y==pop_45_m_df$y,"Yes","No")
+length(which(comp_45x=="Yes"))
+length(which(comp_45y=="Yes"))
+comp_40x<-ifelse(pop_40_f_df$x==pop_40_m_df$x,"Yes","No")
+comp_40y<-ifelse(pop_40_f_df$y==pop_40_m_df$y,"Yes","No")
+length(which(comp_40x=="Yes"))
+length(which(comp_40y=="Yes"))
+
+comp_35x<-ifelse(pop_35_f_df$x==pop_35_m_df$x,"Yes","No")
+comp_35y<-ifelse(pop_35_f_df$y==pop_35_m_df$y,"Yes","No")
+length(which(comp_35x=="Yes"))
+length(which(comp_35y=="Yes"))
+comp_30x<-ifelse(pop_30_f_df$x==pop_30_m_df$x,"Yes","No")
+comp_30y<-ifelse(pop_30_f_df$y==pop_30_m_df$y,"Yes","No")
+length(which(comp_30x=="Yes"))
+length(which(comp_30y=="Yes"))
+
+comp_25x<-ifelse(pop_25_f_df$x==pop_25_m_df$x,"Yes","No")
+comp_25y<-ifelse(pop_25_f_df$y==pop_25_m_df$y,"Yes","No")
+length(which(comp_25x=="Yes"))
+length(which(comp_25y=="Yes"))
+comp_20x<-ifelse(pop_20_f_df$x==pop_20_m_df$x,"Yes","No")
+comp_20y<-ifelse(pop_20_f_df$y==pop_20_m_df$y,"Yes","No")
+length(which(comp_20x=="Yes"))
+length(which(comp_20y=="Yes"))
+
+rm(comp_20x)
+rm(comp_20y)
+rm(comp_25x)
+rm(comp_25y)
+
+rm(comp_30x)
+rm(comp_30y)
+rm(comp_35x)
+rm(comp_35y)
+
+rm(comp_40x)
+rm(comp_40y)
+rm(comp_45x)
+rm(comp_45y)
+
+rm(comp_50x)
+rm(comp_50y)
+rm(comp_55x)
+rm(comp_55y)
+
+rm(comp_60x)
+rm(comp_60y)
+rm(comp_65x)
+rm(comp_65y)
+
+rm(comp_70x)
+rm(comp_70y)
+rm(comp_75x)
+rm(comp_75y)
+
+rm(comp_80x)
+rm(comp_80y)
+
+
+```
+
+
+```{r}
+#Merge dataframes of female and male population in the same age groups
+pop_80_df<-as.data.frame(cbind(pop_80_f_df$x, pop_80_f_df$y, pop_80_f_df$value+pop_80_m_df$value))
+colnames(pop_80_df)<-c("x", "y", "value")
+rm(pop_80_f_df)
+rm(pop_80_m_df)
+
+pop_75_df<-as.data.frame(cbind(pop_75_f_df$x, pop_75_f_df$y, pop_75_f_df$value+pop_75_m_df$value))
+pop_70_df<-as.data.frame(cbind(pop_70_f_df$x, pop_70_f_df$y, pop_70_f_df$value+pop_70_m_df$value))
+pop_65_df<-as.data.frame(cbind(pop_65_f_df$x, pop_65_f_df$y, pop_65_f_df$value+pop_65_m_df$value))
+pop_60_df<-as.data.frame(cbind(pop_60_f_df$x, pop_60_f_df$y, pop_60_f_df$value+pop_60_m_df$value))
+pop_55_df<-as.data.frame(cbind(pop_55_f_df$x, pop_55_f_df$y, pop_55_f_df$value+pop_55_m_df$value))
+pop_50_df<-as.data.frame(cbind(pop_50_f_df$x, pop_50_f_df$y, pop_50_f_df$value+pop_50_m_df$value))
+pop_45_df<-as.data.frame(cbind(pop_45_f_df$x, pop_45_f_df$y, pop_45_f_df$value+pop_45_m_df$value))
+pop_40_df<-as.data.frame(cbind(pop_40_f_df$x, pop_40_f_df$y, pop_40_f_df$value+pop_40_m_df$value))
+pop_35_df<-as.data.frame(cbind(pop_35_f_df$x, pop_35_f_df$y, pop_35_f_df$value+pop_35_m_df$value))
+pop_30_df<-as.data.frame(cbind(pop_30_f_df$x, pop_30_f_df$y, pop_30_f_df$value+pop_30_m_df$value))
+pop_25_df<-as.data.frame(cbind(pop_25_f_df$x, pop_25_f_df$y, pop_25_f_df$value+pop_25_m_df$value))
+pop_20_df<-as.data.frame(cbind(pop_20_f_df$x, pop_20_f_df$y, pop_20_f_df$value+pop_20_m_df$value))
+
+colnames(pop_70_df)<-c("x", "y", "value")
+colnames(pop_75_df)<-c("x", "y", "value")
+colnames(pop_60_df)<-c("x", "y", "value")
+colnames(pop_65_df)<-c("x", "y", "value")
+colnames(pop_50_df)<-c("x", "y", "value")
+colnames(pop_55_df)<-c("x", "y", "value")
+colnames(pop_40_df)<-c("x", "y", "value")
+colnames(pop_45_df)<-c("x", "y", "value")
+colnames(pop_30_df)<-c("x", "y", "value")
+colnames(pop_35_df)<-c("x", "y", "value")
+colnames(pop_20_df)<-c("x", "y", "value")
+colnames(pop_25_df)<-c("x", "y", "value")
+
+rm(pop_70_f_df)
+rm(pop_70_m_df)
+rm(pop_75_f_df)
+rm(pop_75_m_df)
+
+rm(pop_60_f_df)
+rm(pop_60_m_df)
+rm(pop_65_f_df)
+rm(pop_65_m_df)
+
+rm(pop_50_f_df)
+rm(pop_50_m_df)
+rm(pop_55_f_df)
+rm(pop_55_m_df)
+
+rm(pop_40_f_df)
+rm(pop_40_m_df)
+rm(pop_45_f_df)
+rm(pop_45_m_df)
+
+rm(pop_30_f_df)
+rm(pop_30_m_df)
+rm(pop_35_f_df)
+rm(pop_35_m_df)
+
+rm(pop_20_f_df)
+rm(pop_20_m_df)
+rm(pop_25_f_df)
+rm(pop_25_m_df)
+
+```
+
+```{r}
+#Compare if x y coords are the same
+
+
+comp_70x<-ifelse(pop_75_df$x==pop_70_df$x,"Yes","No")
+comp_70y<-ifelse(pop_75_df$y==pop_70_df$y,"Yes","No")
+length(which(comp_70x=="Yes"))
+length(which(comp_70y=="Yes"))
+
+comp_60x<-ifelse(pop_65_df$x==pop_60_df$x,"Yes","No")
+comp_60y<-ifelse(pop_65_df$y==pop_60_df$y,"Yes","No")
+length(which(comp_60x=="Yes"))
+length(which(comp_60y=="Yes"))
+
+comp_50x<-ifelse(pop_55_df$x==pop_50_df$x,"Yes","No")
+comp_50y<-ifelse(pop_55_df$y==pop_50_df$y,"Yes","No")
+length(which(comp_50x=="Yes"))
+length(which(comp_50y=="Yes"))
+
+comp_40x<-ifelse(pop_45_df$x==pop_40_df$x,"Yes","No")
+comp_40y<-ifelse(pop_45_df$y==pop_40_df$y,"Yes","No")
+length(which(comp_40x=="Yes"))
+length(which(comp_40y=="Yes"))
+
+comp_30x<-ifelse(pop_35_df$x==pop_30_df$x,"Yes","No")
+comp_30y<-ifelse(pop_35_df$y==pop_30_df$y,"Yes","No")
+length(which(comp_30x=="Yes"))
+length(which(comp_30y=="Yes"))
+
+comp_20x<-ifelse(pop_25_df$x==pop_20_df$x,"Yes","No")
+comp_20y<-ifelse(pop_25_df$y==pop_20_df$y,"Yes","No")
+length(which(comp_20x=="Yes"))
+length(which(comp_20y=="Yes"))
+
+rm(comp_20x)
+rm(comp_20y)
+
+rm(comp_30x)
+rm(comp_30y)
+
+rm(comp_40x)
+rm(comp_40y)
+
+
+rm(comp_50x)
+rm(comp_50y)
+
+rm(comp_60x)
+rm(comp_60y)
+
+
+rm(comp_70x)
+rm(comp_70y)
+
+```
+
+```{r}
+#Merge dataframes to create age groups in 10 year bins 
+
+pop_70_df<-as.data.frame(cbind(pop_75_df$x, pop_75_df$y, pop_75_df$value+pop_70_df$value))
+pop_60_df<-as.data.frame(cbind(pop_65_df$x, pop_65_df$y, pop_65_df$value+pop_60_df$value))
+pop_50_df<-as.data.frame(cbind(pop_55_df$x, pop_55_df$y, pop_55_df$value+pop_50_df$value))
+pop_40_df<-as.data.frame(cbind(pop_45_df$x, pop_45_df$y, pop_45_df$value+pop_40_df$value))
+pop_30_df<-as.data.frame(cbind(pop_35_df$x, pop_35_df$y, pop_35_df$value+pop_30_df$value))
+pop_20_df<-as.data.frame(cbind(pop_25_df$x, pop_25_df$y, pop_25_df$value+pop_20_df$value))
+
+
+
+colnames(pop_70_df)<-c("x", "y", "value")
+colnames(pop_60_df)<-c("x", "y", "value")
+colnames(pop_50_df)<-c("x", "y", "value")
+colnames(pop_40_df)<-c("x", "y", "value")
+colnames(pop_30_df)<-c("x", "y", "value")
+colnames(pop_20_df)<-c("x", "y", "value")
+
+
+
+rm(pop_75_df)
+rm(pop_55_df)
+rm(pop_45_df)
+rm(pop_35_df)
+rm(pop_25_df)
+
+```
+
+
+
+
+Age group	Male (WHO Fig 5)	Female (WHO Fig 5)	Total	Proportion December
+80+	        4	                 6	               10	        .575
+70-80	     12	                 10	               22	        .1264
+60-70	     18	                 23	               41	        .2356
+50-60	     22                  22	               44	        .2520
+40-50	     15	                 23	               38	        .2184 
+30-40	      4	                  9             	 13	        .0747
+20-30	      1	                  5	                6	        .03448
+```{r}
+#Make single population density data frame weighted to the WHO report age proportions
+agegroups_all<-data.frame(matrix(ncol = 3, nrow = 494676))
+colnames(agegroups_all)<-c("x", "y", "value")
+agegroups_all<-pop_20_df
+agegroups_all$value<-pop_20_df$value*(6/174)
+agegroups_all$value<-agegroups_all$value+pop_30_df$value*(13/174)
+agegroups_all$value<-agegroups_all$value+pop_40_df$value*(38/174)
+agegroups_all$value<-agegroups_all$value+pop_50_df$value*(44/174)
+agegroups_all$value<-agegroups_all$value+pop_60_df$value*(41/174)
+agegroups_all$value<-agegroups_all$value+pop_70_df$value*(22/174)
+agegroups_all$value<-agegroups_all$value+pop_80_df$value*(10/174)
+```
+
+```{r}
+#Load early december cases, Weibo January-February cases and Huanan coordinates
+
+huanan_1000<-matrix(nrow=1000, ncol=2)
+huanan_1000<-as.data.frame(huanan_1000)
+colnames(huanan_1000)<-c("x", "y")
+huanan_1000$x<-114.25738
+huanan_1000$y<-30.61955
+
+huanan_l<-matrix(nrow=494676, ncol=2)
+huanan_l<-as.data.frame(huanan_l)
+colnames(huanan_l)<-c("x", "y")
+huanan_l$x<-114.25738
+huanan_l$y<-30.61955
+
+
+
+early_cases<-read.csv("../data/who_cases_dec-2019.csv")
+
+early_cases$distance_huanan<-distHaversine(huanan_l[1:155,], early_cases[,2:3])/1000
+  
+pop_20_df$distance_huanan<- distHaversine(huanan_l, pop_20_df[,1:2])/1000 
+pop_30_df$distance_huanan<- distHaversine(huanan_l, pop_30_df[,1:2])/1000 
+pop_40_df$distance_huanan<- distHaversine(huanan_l, pop_40_df[,1:2])/1000 
+pop_50_df$distance_huanan<- distHaversine(huanan_l, pop_50_df[,1:2,])/1000
+pop_60_df$distance_huanan<- distHaversine(huanan_l, pop_50_df[,1:2])/1000
+pop_70_df$distance_huanan<- distHaversine(huanan_l, pop_70_df[,1:2])/1000 
+pop_80_df$distance_huanan<- distHaversine(huanan_l, pop_80_df[,1:2])/1000 
+agegroups_all$distance_huanan<- distHaversine(huanan_l, agegroups_all[,1:2])/1000
+
+
+write.csv(pop_80_df, "../data/popdensity_80andolder.csv")
+write.csv(pop_70_df, "../data/popdensity_70-80.csv")
+write.csv(pop_60_df, "../data/popdensity_60-70.csv")
+write.csv(pop_50_df, "../data/popdensity_50-60.csv")
+write.csv(pop_40_df, "../data/popdensity_40-50.csv")
+write.csv(pop_30_df, "../data/popdensity_30-40.csv")
+write.csv(pop_20_df, "../data/popdensity_20-30.csv")
+write.csv(agegroups_all, "../data/popdensity_allagegroups_whoproportions.csv")
+
+
+#Null median and centroids
+agegroups_all$distance_huanan<-distHaversine(agegroups_all[,1:2], huanan_l)/1000
+median_popdensity<-weighted.median(agegroups_all$distance_huanan, w=agegroups_all$value)
+
+centroid_popdensity_x<-median(agegroups_all$x)
+centroid_popdensity_y<-median(agegroups_all$y)
+
+centroid_distance_popdensity<-distHaversine(huanan_l[1,],c(centroid_popdensity_x, centroid_popdensity_y))/1000
+
+centroid_popdensity_x_w<-weighted.median(agegroups_all$x, w=agegroups_all$value)
+centroid_popdensity_y_w<-weighted.median(agegroups_all$y, w=agegroups_all$value)
+centroid_distance_popdensity_weighted<-distHaversine(huanan_l[1,], c(centroid_popdensity_x_w, centroid_popdensity_y_w))/1000
+
+
+
+lineagea_hotel_dist<-2.31
+
+
+
+early_cases_unlinked<-early_cases[which(early_cases$huanan_linked==F),]
+early_cases_linked<-early_cases[which(early_cases$huanan_linked==T),]
+early_cases_lineageb<-early_cases[which(early_cases$lineage=="B"),]
+early_cases_lineagea<-early_cases[which(early_cases$lineage=="A"),]
+
+#median distances
+median_decembercases_all<-median(early_cases$distance_huanan)
+median_decembercases_unlinked<-median(early_cases_unlinked$distance_huanan)
+median_decembercases_linked<-median(early_cases_linked$distance_huanan)
+median_decembercases_lineageb<-median(early_cases_lineageb$distance_huanan)
+median_decembercases_lineagea<-median(c(early_cases_lineagea$distance_huanan,lineagea_hotel_dist) )
+
+
+#centroid distances
+centroid_casesall_x<-median(early_cases$longitude)
+centroid_casesall_y<-median(early_cases$latitude)
+centroid_cases_unlinked_x<-median(early_cases_unlinked$longitude)
+centroid_cases_unlinked_y<-median(early_cases_unlinked$latitude)
+centroid_cases_linked_x<-median(early_cases_linked$longitude)
+centroid_cases_linked_y<-median(early_cases_linked$latitude)
+centroid_cases_lineageb_x<-median(early_cases_lineageb$longitude)
+centroid_cases_lineageb_y<-median(early_cases_lineageb$latitude)
+centroid_distance_casesall<-distHaversine(huanan_l[1,], c(centroid_casesall_x, centroid_casesall_y))/1000
+centroid_distance_casesunlinked<-distHaversine(huanan_l[1,], c(centroid_cases_unlinked_x, centroid_cases_unlinked_y))/1000
+centroid_distance_caseslinked<-distHaversine(huanan_l[1,], c(centroid_cases_linked_x, centroid_cases_linked_y))/1000
+centroid_distance_lineageb<-distHaversine(huanan_l[1,], c(centroid_cases_lineageb_x, centroid_cases_lineageb_y))/1000
+
+
+
+
+
+
+
+early_cases_confirmed<-early_cases[which(early_cases$confirmed==T),]
+
+median_confirmedcases<-median(early_cases_confirmed$distance_huanan)
+
+centroid_confirmed_x<-median(early_cases_confirmed$longitude)
+centroid_confirmed_y<-median(early_cases_confirmed$latitude)
+
+centroid_confirmed_distancehuanan<-distHaversine(huanan_l[1,], c(centroid_confirmed_x, centroid_confirmed_y))/1000
+
+
+
+early_cases_clinicallydiagnosed<-early_cases[which(early_cases$confirmed==F),]
+median_clinicallydcases<-median(early_cases_clinicallydiagnosed$distance_market_km)
+centroid_clinicallyd_x<-median(early_cases_clinicallydiagnosed$longitude)
+centroid_clinicallyd_y<-median(early_cases_clinicallydiagnosed$latitude)
+centroid_clinicallyd_distancehuanan<-distHaversine(huanan_l[1,], c(centroid_clinicallyd_x, centroid_clinicallyd_y))/1000
+
+
+
+
+
+median_decembercases_all
+median_decembercases_unlinked
+median_decembercases_linked
+median_decembercases_lineagea
+median_decembercases_lineageb
+median_confirmedcases
+median_clinicallydcases
+
+centroid_distance_casesall
+centroid_distance_casesunlinked
+centroid_distance_caseslinked
+centroid_distance_lineageb
+centroid_confirmed_distancehuanan
+centroid_clinicallyd_distancehuanan
+
+```
+
+Age group	Male (WHO Fig 5)	Female (WHO Fig 5)	Total	Proportion December
+80+	        4	                 6	               10	        .0575
+70-80	     12	                 10	               22	        .1264
+60-70	     18	                 23	               41	        .2356
+50-60	     22                  22	               44	        .2520
+40-50	     15	                 23	               38	        .2184 
+30-40	      4	                  9             	 13	        .0747
+20-30	      1	                  5	                6	        .03448
+
+
+
+
+Median nulls, built from population density data age matched
+sample sizes: 155, 120, 79, 65, 36, 35, 11, 2, 1
+
+
+
+
+```{r}
+
+median_distance_popdensityage_null_79<-data.frame(matrix(ncol=2, nrow=1000))
+colnames(median_distance_popdensityage_null_79)<-c("Pseudorep", "Median_distance_huanan")
+distances_pseudorep<-c()
+
+
+for(i in 1:1000){
+pseudo_2030<-sample_n(pop_20_df, 3, replace = T, weight = value)
+pseudo_3040<-sample_n(pop_30_df, 6, replace = T, weight = value)
+pseudo_4050<-sample_n(pop_40_df, 17, replace = T, weight = value)
+pseudo_5060<-sample_n(pop_50_df, 20, replace = T, weight = value)
+pseudo_6070<-sample_n(pop_60_df, 19, replace = T, weight = value)
+pseudo_7080<-sample_n(pop_70_df, 10, replace = T, weight = value)
+pseudo_80<-sample_n(pop_80_df,  4, replace = T, weight = value)
+pseudo_age_groups<-rbind(pseudo_2030, pseudo_3040, pseudo_4050, pseudo_5060, pseudo_6070, pseudo_7080, pseudo_80)
+distances_huanan<-distHaversine(pseudo_age_groups[,1:2], huanan_1000[1:79,])/1000
+  median_dist<-median(distances_huanan)
+  median_distance_popdensityage_null_79[i,2]<-median_dist
+
+}
+
+median_distance_popdensityage_null_79$Pseudorep<-c(1:1000)
+median_distance_popdensityage_null_79<-median_distance_popdensityage_null_79 %>% arrange(Median_distance_huanan)
+
+
+write.csv(median_distance_popdensityage_null_79, "../data/distance_popdensityagegroups_null_79.csv")
+
+
+
+
+
+
+
+median_distance_popdensityage_null_155<-data.frame(matrix(ncol=2, nrow=1000))
+colnames(median_distance_popdensityage_null_155)<-c("Pseudorep", "Median_distance_huanan")
+distances_pseudorep<-c()
+
+
+for(i in 1:1000){
+pseudo_2030<-sample_n(pop_20_df, 5, replace = T, weight = value)
+pseudo_3040<-sample_n(pop_30_df, 12, replace = T, weight = value)
+pseudo_4050<-sample_n(pop_40_df, 34, replace = T, weight = value)
+pseudo_5060<-sample_n(pop_50_df, 39, replace = T, weight = value)
+pseudo_6070<-sample_n(pop_60_df, 36, replace = T, weight = value)
+pseudo_7080<-sample_n(pop_70_df, 20, replace = T, weight = value)
+pseudo_80<-sample_n(pop_80_df,  9, replace = T, weight = value)
+pseudo_age_groups<-rbind(pseudo_2030, pseudo_3040, pseudo_4050, pseudo_5060, pseudo_6070, pseudo_7080, pseudo_80)
+distances_huanan<-distHaversine(pseudo_age_groups[,1:2], huanan_1000[1:155,])/1000
+  median_dist<-median(distances_huanan)
+  median_distance_popdensityage_null_155[i,2]<-median_dist
+
+}
+
+median_distance_popdensityage_null_155$Pseudorep<-c(1:1000)
+median_distance_popdensityage_null_155<-median_distance_popdensityage_null_155 %>% arrange(Median_distance_huanan)
+
+
+write.csv(median_distance_popdensityage_null_155, "../data/distance_popdensityagegroups_null_155.csv")
+
+
+median_distance_popdensityage_null_120<-data.frame(matrix(ncol=2, nrow=1000))
+colnames(median_distance_popdensityage_null_120)<-c("Pseudorep", "Median_distance_huanan")
+distances_pseudorep<-c()
+
+
+for(i in 1:1000){
+pseudo_2030<-sample_n(pop_20_df, 4, replace = T, weight = value)
+pseudo_3040<-sample_n(pop_30_df, 9, replace = T, weight = value)
+pseudo_4050<-sample_n(pop_40_df, 26, replace = T, weight = value)
+pseudo_5060<-sample_n(pop_50_df, 31, replace = T, weight = value)
+pseudo_6070<-sample_n(pop_60_df, 28, replace = T, weight = value)
+pseudo_7080<-sample_n(pop_70_df, 15, replace = T, weight = value)
+pseudo_80<-sample_n(pop_80_df,  7, replace = T, weight = value)
+pseudo_age_groups<-rbind(pseudo_2030, pseudo_3040, pseudo_4050, pseudo_5060, pseudo_6070, pseudo_7080, pseudo_80)
+distances_huanan<-distHaversine(pseudo_age_groups[,1:2], huanan_1000[1:120,])/1000
+  median_dist<-median(distances_huanan)
+  median_distance_popdensityage_null_120[i,2]<-median_dist
+
+}
+
+median_distance_popdensityage_null_120$Pseudorep<-c(1:1000)
+median_distance_popdensityage_null_120<-median_distance_popdensityage_null_120 %>% arrange(Median_distance_huanan)
+
+
+write.csv(median_distance_popdensityage_null_120, "../data/distance_popdensityagegroups_null_120.csv")
+
+
+
+median_distance_popdensityage_null_65<-data.frame(matrix(ncol=2, nrow=1000))
+colnames(median_distance_popdensityage_null_65)<-c("Pseudorep", "Median_distance_huanan")
+distances_pseudorep<-c()
+
+
+for(i in 1:1000){
+pseudo_2030<-sample_n(pop_20_df, 4, replace = T, weight = value)
+pseudo_3040<-sample_n(pop_30_df, 8, replace = T, weight = value)
+pseudo_4050<-sample_n(pop_40_df, 15, replace = T, weight = value)
+pseudo_5060<-sample_n(pop_50_df, 17, replace = T, weight = value)
+pseudo_6070<-sample_n(pop_60_df, 14, replace = T, weight = value)
+pseudo_7080<-sample_n(pop_70_df, 5, replace = T, weight = value)
+pseudo_80<-sample_n(pop_80_df,  2, replace = T, weight = value)
+pseudo_age_groups<-rbind(pseudo_2030, pseudo_3040, pseudo_4050, pseudo_5060, pseudo_6070, pseudo_7080, pseudo_80)
+distances_huanan<-distHaversine(pseudo_age_groups[,1:2], huanan_1000[1:65,])/1000
+  median_dist<-median(distances_huanan)
+  median_distance_popdensityage_null_65[i,2]<-median_dist
+
+}
+
+median_distance_popdensityage_null_65$Pseudorep<-c(1:1000)
+median_distance_popdensityage_null_65<-median_distance_popdensityage_null_65 %>% arrange(Median_distance_huanan)
+
+
+write.csv(median_distance_popdensityage_null_65, "../data/distance_popdensityagegroups_null_65.csv")
+
+
+
+median_distance_popdensityage_null_35<-data.frame(matrix(ncol=2, nrow=1000))
+colnames(median_distance_popdensityage_null_35)<-c("Pseudorep", "Median_distance_huanan")
+distances_pseudorep<-c()
+
+for(i in 1:1000){
+pseudo_2030<-sample_n(pop_20_df, 2, replace = T, weight = value)
+pseudo_3040<-sample_n(pop_30_df, 4, replace = T, weight = value)
+pseudo_4050<-sample_n(pop_40_df, 8, replace = T, weight = value)
+pseudo_5060<-sample_n(pop_50_df, 9, replace = T, weight = value)
+pseudo_6070<-sample_n(pop_60_df, 8, replace = T, weight = value)
+pseudo_7080<-sample_n(pop_70_df, 3, replace = T, weight = value)
+pseudo_80<-sample_n(pop_80_df,  1, replace = T, weight = value)
+pseudo_age_groups<-rbind(pseudo_2030, pseudo_3040, pseudo_4050, pseudo_5060, pseudo_6070, pseudo_7080, pseudo_80)
+distances_huanan<-distHaversine(pseudo_age_groups[,1:2], huanan_1000[1:35,])/1000
+  median_dist<-median(distances_huanan)
+  median_distance_popdensityage_null_35[i,2]<-median_dist
+
+}
+
+median_distance_popdensityage_null_35$Pseudorep<-c(1:1000)
+median_distance_popdensityage_null_35<-median_distance_popdensityage_null_35%>% arrange(Median_distance_huanan)
+
+
+write.csv(median_distance_popdensityage_null_35, "../data/distance_popdensityagegroups_null_35.csv")
+
+
+
+
+    
+#36 cases
+    
+median_distance_popdensityage_null_36<-data.frame(matrix(ncol=2, nrow=1000))
+colnames(median_distance_popdensityage_null_36)<-c("Pseudorep", "Median_distance_huanan")
+distances_pseudorep<-c()
+
+for(i in 1:1000){
+pseudo_2030<-sample_n(pop_20_df, 2, replace = T, weight = value)
+pseudo_3040<-sample_n(pop_30_df, 5, replace = T, weight = value)
+pseudo_4050<-sample_n(pop_40_df, 8, replace = T, weight = value)
+pseudo_5060<-sample_n(pop_50_df, 9, replace = T, weight = value)
+pseudo_6070<-sample_n(pop_60_df, 8, replace = T, weight = value)
+pseudo_7080<-sample_n(pop_70_df, 3, replace = T, weight = value)
+pseudo_80<-sample_n(pop_80_df,  1, replace = T, weight = value)
+pseudo_age_groups<-rbind(pseudo_2030, pseudo_3040, pseudo_4050, pseudo_5060, pseudo_6070, pseudo_7080, pseudo_80)
+distances_huanan<-distHaversine(pseudo_age_groups[,1:2], huanan_1000[1:36,])/1000
+  median_dist<-median(distances_huanan)
+  median_distance_popdensityage_null_36[i,2]<-median_dist
+
+}
+
+median_distance_popdensityage_null_36$Pseudorep<-c(1:1000)
+median_distance_popdensityage_null_36<-median_distance_popdensityage_null_36 %>% arrange(Median_distance_huanan)
+
+
+write.csv(median_distance_popdensityage_null_36, "../data/distance_popdensityagegroups_null_36.csv")
+
+median_distance_popdenseages_null_11<-data.frame(matrix(ncol=2, nrow=1000))
+colnames(median_distance_popdenseages_null_11)<-c("Pseudorep", "Median_distance_huanan")
+distances_pseudorep<-c()
+
+
+  for(i in 1:1000){
+  pseudo_replicate<-sample_n(agegroups_all, 11, replace = T, weight = value)
+    distances_huanan<-distHaversine(pseudo_replicate[,1:2], huanan_1000[1:11,])/1000
+    median_dist<-median(distances_huanan)
+   median_distance_popdenseages_null_11[i,2]<-median_dist
+  
+  }
+
+median_distance_popdenseages_null_11$Pseudorep<-c(1:1000)
+median_distance_popdenseages_null_11<-median_distance_popdenseages_null_11%>% arrange(Median_distance_huanan)
+
+
+write.csv(median_distance_popdenseages_null_11, "../data/median_distance_popdenseages_null_11.csv")
+
+
+median_distance_popdenseages_null_2<-data.frame(matrix(ncol=2, nrow=1000))
+colnames(median_distance_popdenseages_null_2)<-c("Pseudorep", "Median_distance_huanan")
+distances_pseudorep<-c()
+
+
+  for(i in 1:1000){
+  pseudo_replicate<-sample_n(agegroups_all, 2, replace = T, weight = value)
+    distances_huanan<-distHaversine(pseudo_replicate[,1:2], huanan_1000[1:2,])/1000
+    median_dist<-median(distances_huanan)
+   median_distance_popdenseages_null_2[i,2]<-median_dist
+  
+  }
+
+median_distance_popdenseages_null_2$Pseudorep<-c(1:1000)
+median_distance_popdenseages_null_2<-median_distance_popdenseages_null_2 %>% arrange(Median_distance_huanan)
+
+
+write.csv(median_distance_popdenseages_null_2, "../data/median_distance_popdenseages_null_2.csv")
+
+
+
+median_distance_popdenseages_null_1<-data.frame(matrix(ncol=2, nrow=1000))
+colnames(median_distance_popdenseages_null_1)<-c("Pseudorep", "Median_distance_huanan")
+distances_pseudorep<-c()
+
+
+  for(i in 1:1000){
+  pseudo_replicate<-sample_n(agegroups_all, 1, replace = T, weight = value)
+    distances_huanan<-distHaversine(pseudo_replicate[,1:2], huanan_1000[1,])/1000
+    median_dist<-median(distances_huanan)
+   median_distance_popdenseages_null_1[i,2]<-median_dist
+  
+  }
+
+median_distance_popdenseages_null_1$Pseudorep<-c(1:1000)
+median_distance_popdenseages_null_1<-median_distance_popdenseages_null_1 %>% arrange(Median_distance_huanan)
+
+
+write.csv(median_distance_popdenseages_null_1, "../data/median_distance_popdenseages_null_1.csv")
+
+```
+Median nulls, built from Weibo help seekers data, cases in January-February 2020
+sample sizes: 155, 120, 79, 65, 36, 35, 11, 2, 1
+
+
+
+```{r}
+weibo_df<-read.csv("../data/weibox_help_seekers_jan-2020.csv")
+
+
+median_distance_weibo_null_1<-data.frame(matrix(ncol=2, nrow=1000))
+colnames(median_distance_weibo_null_1)<-c("Pseudorep", "Median_distance_huanan")
+distances_pseudorep<-c()
+
+
+for(i in 1:1000){
+pseudo_replicate<-sample_n(weibo_df, 1, replace = T)
+  median_dist<-median(pseudo_replicate$distance_market_km)
+  median_distance_weibo_null_1[i,2]<-median_dist
+
+}
+
+median_distance_weibo_null_1$Pseudorep<-c(1:1000)
+median_distance_weibo_null_1<-median_distance_weibo_null_1 %>% arrange(Median_distance_huanan)
+
+write.csv(median_distance_weibo_null_1, "../data/median_distance_weibo_null_1.csv")
+
+median_distance_weibo_null_2<-data.frame(matrix(ncol=2, nrow=1000))
+colnames(median_distance_weibo_null_2)<-c("Pseudorep", "Median_distance_huanan")
+distances_pseudorep<-c()
+
+
+for(i in 1:1000){
+pseudo_replicate<-sample_n(weibo_df, 2, replace = T)
+  median_dist<-median(pseudo_replicate$distance_market_km)
+  median_distance_weibo_null_2[i,2]<-median_dist
+
+}
+
+median_distance_weibo_null_2$Pseudorep<-c(1:1000)
+median_distance_weibo_null_2<-median_distance_weibo_null_2 %>% arrange(Median_distance_huanan)
+
+write.csv(median_distance_weibo_null_2, "../data/median_distance_weibo_null_2.csv")
+
+
+median_distance_weibo_null_11<-data.frame(matrix(ncol=2, nrow=1000))
+colnames(median_distance_weibo_null_11)<-c("Pseudorep", "Median_distance_huanan")
+distances_pseudorep<-c()
+
+
+for(i in 1:1000){
+pseudo_replicate<-sample_n(weibo_df, 11, replace = T)
+  median_dist<-median(pseudo_replicate$distance_market_km)
+  median_distance_weibo_null_11[i,2]<-median_dist
+
+}
+
+median_distance_weibo_null_11$Pseudorep<-c(1:1000)
+median_distance_weibo_null_11<-median_distance_weibo_null_11 %>% arrange(Median_distance_huanan)
+
+write.csv(median_distance_weibo_null_11, "../data/median_distance_weibo_null_11.csv")
+
+median_distance_weibo_null_35<-data.frame(matrix(ncol=2, nrow=1000))
+colnames(median_distance_weibo_null_35)<-c("Pseudorep", "Median_distance_huanan")
+distances_pseudorep<-c()
+
+
+for(i in 1:1000){
+pseudo_replicate<-sample_n(weibo_df, 35, replace = T)
+  median_dist<-median(pseudo_replicate$distance_market_km)
+  median_distance_weibo_null_35[i,2]<-median_dist
+
+}
+
+median_distance_weibo_null_35$Pseudorep<-c(1:1000)
+median_distance_weibo_null_35<-median_distance_weibo_null_35 %>% arrange(Median_distance_huanan)
+
+write.csv(median_distance_weibo_null_35, "../data/median_distance_weibo_null_35.csv")
+
+
+median_distance_weibo_null_36<-data.frame(matrix(ncol=2, nrow=1000))
+colnames(median_distance_weibo_null_36)<-c("Pseudorep", "Median_distance_huanan")
+distances_pseudorep<-c()
+
+
+for(i in 1:1000){
+pseudo_replicate<-sample_n(weibo_df, 36, replace = T)
+  median_dist<-median(pseudo_replicate$distance_market_km)
+  median_distance_weibo_null_36[i,2]<-median_dist
+
+}
+
+median_distance_weibo_null_36$Pseudorep<-c(1:1000)
+median_distance_weibo_null_36<-median_distance_weibo_null_36 %>% arrange(Median_distance_huanan)
+
+write.csv(median_distance_weibo_null_36, "../data/median_distance_weibo_null_36.csv")
+
+
+
+median_distance_weibo_null_65<-data.frame(matrix(ncol=2, nrow=1000))
+colnames(median_distance_weibo_null_65)<-c("Pseudorep", "Median_distance_huanan")
+distances_pseudorep<-c()
+
+
+for(i in 1:1000){
+pseudo_replicate<-sample_n(weibo_df, 65, replace = T)
+  median_dist<-median(pseudo_replicate$distance_market_km)
+  median_distance_weibo_null_65[i,2]<-median_dist
+
+}
+
+median_distance_weibo_null_65$Pseudorep<-c(1:1000)
+median_distance_weibo_null_65<-median_distance_weibo_null_65 %>% arrange(Median_distance_huanan)
+
+write.csv(median_distance_weibo_null_65, "../data/median_distance_weibo_null_65.csv")
+
+median_distance_weibo_null_79<-data.frame(matrix(ncol=2, nrow=1000))
+colnames(median_distance_weibo_null_79)<-c("Pseudorep", "Median_distance_huanan")
+distances_pseudorep<-c()
+
+
+for(i in 1:1000){
+pseudo_replicate<-sample_n(weibo_df, 79, replace = T)
+  median_dist<-median(pseudo_replicate$distance_market_km)
+  median_distance_weibo_null_79[i,2]<-median_dist
+
+}
+
+median_distance_weibo_null_79$Pseudorep<-c(1:1000)
+median_distance_weibo_null_79<-median_distance_weibo_null_79 %>% arrange(Median_distance_huanan)
+
+write.csv(median_distance_weibo_null_79, "../data/median_distance_weibo_null_79.csv")
+
+
+
+  
+median_distance_weibo_null_155<-data.frame(matrix(ncol=2, nrow=1000))
+colnames(median_distance_weibo_null_155)<-c("Pseudorep", "Median_distance_huanan")
+distances_pseudorep<-c()
+
+
+for(i in 1:1000){
+pseudo_replicate<-sample_n(weibo_df, 155, replace = T)
+  median_dist<-median(pseudo_replicate$distance_market_km)
+  median_distance_weibo_null_155[i,2]<-median_dist
+
+}
+
+median_distance_weibo_null_155$Pseudorep<-c(1:1000)
+median_distance_weibo_null_155<-median_distance_weibo_null_155 %>% arrange(Median_distance_huanan)
+
+
+
+write.csv(median_distance_weibo_null_155, "../data/median_distance_weibo_null_155.csv")
+
+
+
+  
+median_distance_weibo_null_120<-data.frame(matrix(ncol=2, nrow=1000))
+colnames(median_distance_weibo_null_120)<-c("Pseudorep", "Median_distance_huanan")
+distances_pseudorep<-c()
+
+
+for(i in 1:1000){
+pseudo_replicate<-sample_n(weibo_df, 120, replace = T)
+  median_dist<-median(pseudo_replicate$distance_market_km)
+  median_distance_weibo_null_120[i,2]<-median_dist
+
+}
+
+median_distance_weibo_null_120$Pseudorep<-c(1:1000)
+median_distance_weibo_null_120<-median_distance_weibo_null_120 %>% arrange(Median_distance_huanan)
+
+write.csv(median_distance_weibo_null_120, "../data/median_distance_weibo_null_120.csv")
+
+
+
+
+
+
+
+```
+
+Centroid nulls
+
+
+```{r}
+
+
+
+centroidnull_80older<-sample_n(pop_80_df, 58000, replace = T, weight = value)
+centroidnull_7080<-sample_n(pop_70_df, 126000, replace = T, weight = value)
+centroidnull_6070<-sample_n(pop_60_df, 236000, replace = T, weight = value)
+centroidnull_5060<-sample_n(pop_50_df, 253000, replace = T, weight = value)
+centroidnull_4050<-sample_n(pop_40_df, 218000, replace = T, weight = value)
+centroidnull_3040<-sample_n(pop_30_df, 75000, replace = T, weight = value)
+centroidnull_2030<-sample_n(pop_20_df, 34000, replace = T, weight = value)
+centroidnull_agegroups_1mill<-rbind(centroidnull_80older, centroidnull_7080, centroidnull_6070, centroidnull_5060, centroidnull_4050, centroidnull_3040, centroidnull_2030)
+
+centroidnull_agegroups_1mill<-centroidnull_agegroups_1mill%>%arrange(distance_huanan)
+write.csv(centroidnull_agegroups_1mill, "../data/centroidnull_agegroups_1mill.csv")
+
+
+centroidnull_weibo_1mill<-sample_n(weibo_df, 1000000, replace = T) 
+centroidnull_weibo_1mill<-centroidnull_weibo_1mill%>%arrange(distance_market_km)
+write.csv(centroidnull_weibo_1mill, "../data/centroidnull_weibo_1mill.csv")
+
+```
+
+
+Number of cases that can be removed before losing statistical significance
+
+```{r}
+early_cases<-read.csv("../data/who_cases_dec-2019.csv")
+early_cases_df<-early_cases[, c(2,3,5)]
+colnames(early_cases_df)<-c("x", "y", "distance_huanan")
+early_cases_unlinked_df<-early_cases[which(early_cases$huanan_linked==F), c(2,3,5)]
+colnames(early_cases_unlinked_df)<-c("x", "y", "distance_huanan")
+  
+huanan_1000<-matrix(nrow=1000, ncol=2)
+huanan_1000<-as.data.frame(huanan_1000)
+colnames(huanan_1000)<-c("x", "y")
+huanan_1000$x<-114.25738
+huanan_1000$y<-30.61955
+early_cases_df<-early_cases_df%>%arrange(distance_huanan)
+early_cases_unlinked_df<-early_cases_unlinked_df%>%arrange(distance_huanan)
+pop_agegroups<-read.csv("../data/popdensity_allagegroups_whoproportions.csv")
+centroid_null<-read.csv("../data/centroidnull_agegroups_1mill.csv")
+early_cases_removed<-matrix(nrow=155, ncol=6)
+early_cases_removed<-as.data.frame(early_cases_removed)
+colnames(early_cases_removed)<-c("Number_closest_cases_removed", "Median_distance_Huanan", "Centroid_x", "Centroid_y", "Centroid_distance_huanan", "p-value_centroid")
+median_distance_huanan_all<-median(early_cases_df$distance_huanan)
+colnames(early_cases_df)<-c("x", "y", "distance_huanan")
+early_cases_removed[1,1]<-0
+early_cases_removed[1,2]<-median_distance_huanan_all
+early_cases_removed[1,3]<-median(early_cases_df$x)
+early_cases_removed[1,4]<-median(early_cases_df$y)
+early_cases_removed[1,5]<-distHaversine(early_cases_removed[1,3:4], huanan_1000[1,])/1000
+early_cases_removed[1,6]<-length(which(centroid_null$distance_huanan<early_cases_removed[1,5])) /1000000
+for(i in (1:154)){
+ cases<-early_cases_df[-(1:i),]
+ early_cases_removed[i+1,1]<-i
+ early_cases_removed[i+1,2]<-median(cases$distance_huanan)
+ early_cases_removed[i+1,3]<-median(cases$x)
+ early_cases_removed[i+1,4]<-median(cases$y)
+ early_cases_removed[i+1,5]<-distHaversine(early_cases_removed[i+1,3:4], huanan_1000[1,])/1000
+ early_cases_removed[i+1,6]<-length(which(centroid_null$distance_huanan<early_cases_removed[i+1,5])) /1000000
+ 
+}
+centroid_null_centroidx<-median(centroid_null$x)
+centroid_null_centroidy<-median(centroid_null$y)
+centroid_null_centroid_distancehuanan<-distHaversine(c(centroid_null_centroidx, centroid_null_centroidy), huanan_1000[1,])/1000
+centroid_null_centroid155<-rep(centroid_null_centroid_distancehuanan, 155)
+N_cases_removed<-early_cases_removed$Number_closest_cases_removed
+centroids_removed<-early_cases_removed$Centroid_distance_huanan
+median_155<-early_cases_removed$Median_distance_Huanan
+```
+
+```{r}
+early_cases_unlinkedremoved<-matrix(nrow=120, ncol=6)
+early_cases_unlinkedremoved<-as.data.frame(early_cases_unlinkedremoved)
+colnames(early_cases_unlinkedremoved)<-c("Number_closest_cases_removed", "Median_distance_Huanan", "Centroid_x", "Centroid_y", "Centroid_distance_huanan", "p-value_centroid")
+colnames(early_cases_unlinked_df)<-c("x", "y", "distance_huanan")
+early_cases_unlinkedremoved[1,1]<-0
+early_cases_unlinkedremoved[1,2]<-median(early_cases_unlinked_df$distance_huanan)
+early_cases_unlinkedremoved[1,3]<-median(early_cases_unlinked_df$x)
+early_cases_unlinkedremoved[1,4]<-median(early_cases_unlinked_df$y)
+early_cases_unlinkedremoved[1,5]<-distHaversine(early_cases_unlinkedremoved[1,3:4], huanan_1000[1,])/1000
+early_cases_unlinkedremoved[1,6]<-length(which(centroid_null$distance_huanan<early_cases_unlinkedremoved[1,5])) /1000000
+   
+for(i in (1:119)){
+ cases<-early_cases_unlinked_df[-(1:i),]
+ early_cases_unlinkedremoved[i+1,1]<-i
+ early_cases_unlinkedremoved[i+1,2]<-median(cases$distance_huanan)
+ early_cases_unlinkedremoved[i+1,3]<-median(cases$x)
+ early_cases_unlinkedremoved[i+1,4]<-median(cases$y)
+ early_cases_unlinkedremoved[i+1,5]<-distHaversine(early_cases_unlinkedremoved[i+1,3:4], huanan_1000[1,])/1000
+ early_cases_unlinkedremoved[i+1,6]<-length(which(centroid_null$distance_huanan<early_cases_unlinkedremoved[i+1,5])) /1000000
+    
+}
+```
+
+```{r}
+median_removed_null<- matrix(nrow=155, ncol=6)
+median_removed_null<-as.data.frame(median_removed_null)
+colnames(median_removed_null)<-c("Null_sample_size", "Median_distance_huanan_null", "Median_distance_all_removed", "p-value_all_removed",  "Median_distance_unlinked_removed", "p-value_unlinked_removed" )
+median_removed_null$Median_distance_all_removed[1]<-median(early_cases_df$distance_huanan)
+median_removed_null$Median_distance_unlinked_removed[36]<-median(early_cases_unlinked_df$distance_huanan)
+for(i in (1:154)){
+  median_removed_null[i+1,3]<-median(early_cases_df[-(1:i),3])
+  
+}
+median_removed_unlinked<-c()
+for(i in (1:119)){
+  median_removed_unlinked<-c(median_removed_unlinked,median(early_cases_unlinked_df[-(1:i),3]))
+  
+}
+median_removed_null[c(37:155),5]<-median_removed_unlinked
+medians_huanan<-c()
+for(i in (0:154)){
+  for(j in (1:1000)){
+     cases<-sample_n(pop_agegroups, 155-i, weight = pop_agegroups$value)
+     i2<-155-i  
+     cases$distance_huanan<-distHaversine(cases[,2:3], huanan_1000[1:i2,])/1000
+     median_distance<-median(cases$distance_huanan)
+     medians_huanan<-c(medians_huanan, median_distance)
+     
+     
+     
+  }
+ median_removed_null[i+1,1]<-c(155-i)
+ median_removed_null[i+1,2]<-median(medians_huanan)
+  print(c("median of medians", i, median(medians_huanan)))
+  print(length(medians_huanan))
+  medians_huanan<-sort(medians_huanan)
+  values_smaller_all<-which(medians_huanan<=median_removed_null[i+1,3])
+  print(length(values_smaller_all))
+  p_value_all<-length(values_smaller_all)/1000
+  median_removed_null[i+1,4]<-p_value_all
+   values_smaller_unlinked<-which(medians_huanan<=median_removed_null[i+1,5])
+  print(length(values_smaller_unlinked))
+  p_value_unlinked<-length(values_smaller_unlinked)/1000
+  median_removed_null[i+1,6]<-p_value_unlinked
+  medians_huanan<-c()
+}
+median_removed_null$`p-value_unlinked_removed`[1:34]<-NA
+write.csv(median_removed_null, "../data/median_removed_null.csv")
+median_removed_null<-read.csv("../data/median_removed_null.csv")
+```
+
+```{r}
+median_nulls<-median_removed_null$Median_distance_huanan_null
+plot(N_cases_removed, centroids_removed, type="o", col="red", pch="*", ylab="Distance to Huanan", xlab="Number of cases removed", lty=1 )
+points(N_cases_removed, centroid_null_centroid155, col="black", pch="*")
+lines(N_cases_removed, centroid_null_centroid155, col="black", lty=3)
+points(N_cases_removed, median_155, col="blue", pch="*")
+lines(N_cases_removed, median_155, col="blue", lty=3)
+points(N_cases_removed, median_nulls[1:155], col="green", pch="*")
+lines(N_cases_removed, median_nulls[1:155], col="green", lty=3)
+legend(1,50,legend=c("Center-point distance (155 cases)","Center-point distance null","Median distance (155 cases)", "Median distance null"), col=c("red","black","blue", "green"),
+                                   pch=c("*","+","*"),lty=c(1,2,3), ncol=1)
+centroid_null_120<-sample_n(centroid_null, 120, replace = T)
+centroid_null_centroidx<-median(centroid_null$x)
+centroid_null_centroidy<-median(centroid_null$y)
+centroid_null_centroid_distancehuanan<-distHaversine(c(centroid_null_centroidx, centroid_null_centroidy), huanan_1000[1,])/1000
+centroid_null_centroid120<-rep(centroid_null_centroid_distancehuanan, 120)
+N_cases_unlinkedremoved<-early_cases_unlinkedremoved$Number_closest_cases_removed
+centroids_removed<-early_cases_unlinkedremoved$Centroid_distance_huanan
+centroid_sample120<-centroid_null_120$distance_huanan
+median_120<-early_cases_unlinkedremoved$Median_distance_Huanan
+median_nulls<-rbind(median_removed_null[1:44,], median_removed_null[1:44,], median_removed_null[1:44,], median_removed_null[1:44,])
+median_nulls<-median_nulls$Median_distance_huanan_null
+plot(N_cases_unlinkedremoved, centroids_removed, type="o", col="red", pch="*", ylab="Distance to Huanan", xlab="Number of cases removed", lty=1 )
+points(N_cases_unlinkedremoved, centroid_null_centroid120, col="black", pch="*")
+lines(N_cases_unlinkedremoved, centroid_null_centroid120, col="black", lty=3)
+points(N_cases_unlinkedremoved, median_120, col="blue", pch="*")
+lines(N_cases_unlinkedremoved, median_120, col="blue", lty=3)
+points(N_cases_unlinkedremoved, median_nulls[1:120], col="green", pch="*")
+lines(N_cases_unlinkedremoved, median_nulls[1:120], col="green", lty=3)
+legend(1,50,legend=c("Center-point distance (120 unlinked cases)","Center-point distance null","Median distance (120 unlinked cases)", "Median distance null"), col=c("red","black","blue", "green"),
+                                   pch=c("*","+","*"),lty=c(1,2,3), ncol=1)
+```
