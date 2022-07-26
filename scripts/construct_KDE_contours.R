@@ -42,7 +42,7 @@ market.x <- 114.25738
 market.y <- 30.61955
 
 # size of KDE grid
-grid_size = 5000
+grid_size <- 5000
 
 # process December case list
 filename <- "who_cases_dec-2019" 
