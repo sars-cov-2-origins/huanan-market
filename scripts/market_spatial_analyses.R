@@ -55,7 +55,9 @@ numberOfSubsampled <- 104
 unsampled_KDEprobabily <- 0.25
 
 # process December case list
-filename1 <- "who_cases_dec-2019" 
+data.path <- "../data/"
+#filename1 <- paste(data.path,"who_cases_dec-2019" 
+filename1 <- paste(data.path,"who_cases_dec-2019", sep = "")
 cases = read.csv(paste(filename1, "csv", sep = "."),header=T)
 cases.linked <- cases[cases$huanan_linked == "TRUE",]
 cases.notLinked <- cases[cases$huanan_linked == "FALSE",]
@@ -67,45 +69,45 @@ cases.B <- cases[cases$lineage == "B",]
 cases.confirmed <- cases[cases$confirmed == "TRUE" & !is.na(cases$confirmed),]
 cases.clinDiag <- cases[cases$confirmed == "FALSE" & !is.na(cases$confirmed),]
 #adding one case not linked to the market known to have been infected with lineage A and known to have stayed in a nearby hotel for the 5 days before symptom onset
-additionalCase <- c(NA, NA, NA, "Point",FALSE, FALSE, "A", NA, "additional case not linked to the market known to have been infected with lineage A and known to have stayed in a nearby hotel")
+additionalCase <- c(NA, NA, NA, NA, NA, FALSE, FALSE, "A", NA, "additional case not linked to the market known to have been infected with lineage A and known to have stayed in a nearby hotel")
 cases.notLinked.A[nrow(cases.notLinked.A) + 1,] <- additionalCase
 
 #read in null distributions
-median.distances.all.weibo <- read.csv2("nulls/median_distance_weibo_null_155.csv",header=T, sep = ",")
-median.distances.notLinked.weibo <- read.csv2("nulls/median_distance_weibo_null_120.csv",header=T, sep = ",")
-median.distances.linked.weibo <- read.csv2("nulls/median_distance_weibo_null_35.csv",header=T, sep = ",")
-median.distances.linked.B.weibo <- read.csv2("nulls/median_distance_weibo_null_10.csv",header=T, sep = ",")
-median.distances.notLinked.B.weibo <- read.csv2("nulls/median_distance_weibo_null_1.csv",header=T, sep = ",")
+median.distances.all.weibo <- read.csv2(paste(data.path,"median_distance_weibo_null_155.csv", sep = ""),header=T, sep = ",")
+median.distances.notLinked.weibo <- read.csv2(paste(data.path,"median_distance_weibo_null_120.csv", sep = ""),header=T, sep = ",")
+median.distances.linked.weibo <- read.csv2(paste(data.path,"median_distance_weibo_null_35.csv", sep = ""),header=T, sep = ",")
+median.distances.linked.B.weibo <- read.csv2(paste(data.path,"median_distance_weibo_null_10.csv", sep = ""),header=T, sep = ",")
+median.distances.notLinked.B.weibo <- read.csv2(paste(data.path,"median_distance_weibo_null_1.csv", sep = ""),header=T, sep = ",")
 median.distances.notLinked.A1.weibo <- median.distances.notLinked.B.weibo
-median.distances.notLinked.A.weibo <- read.csv2("nulls/median_distance_weibo_null_2.csv",header=T, sep = ",")
-median.distances.B.weibo <- read.csv2("nulls/median_distance_weibo_null_11.csv",header=T, sep = ",")
-median.distances.confirmed.weibo <- read.csv2("nulls/median_distance_weibo_null_65.csv",header=T, sep = ",")
-median.distances.clinDiag.weibo <- read.csv2("nulls/median_distance_weibo_null_79.csv",header=T, sep = ",")
+median.distances.notLinked.A.weibo <- read.csv2(paste(data.path,"median_distance_weibo_null_2.csv", sep = ""),header=T, sep = ",")
+median.distances.B.weibo <- read.csv2(paste(data.path,"median_distance_weibo_null_11.csv", sep = ""),header=T, sep = ",")
+median.distances.confirmed.weibo <- read.csv2(paste(data.path,"median_distance_weibo_null_65.csv", sep = ""),header=T, sep = ",")
+median.distances.clinDiag.weibo <- read.csv2(paste(data.path,"median_distance_weibo_null_79.csv", sep = ""),header=T, sep = ",")
 
-median.distances.notLinked.sub.weibo <- read.csv2("nulls/median_distance_weibo_null_104.csv",header=T, sep = ",")
-median.distances.all.ghosts.weibo <- read.csv2("nulls/median_distance_weibo_null_164.csv",header=T, sep = ",")
-median.distances.notLinked.ghosts.weibo <- read.csv2("nulls/median_distance_weibo_null_129.csv",header=T, sep = ",")
-median.distances.linked.ghosts.weibo <- read.csv2("nulls/median_distance_weibo_null_44.csv",header=T, sep = ",")
+median.distances.notLinked.sub.weibo <- read.csv2(paste(data.path,"median_distance_weibo_null_104.csv", sep = ""),header=T, sep = ",")
+median.distances.all.ghosts.weibo <- read.csv2(paste(data.path,"median_distance_weibo_null_164.csv", sep = ""),header=T, sep = ",")
+median.distances.notLinked.ghosts.weibo <- read.csv2(paste(data.path,"median_distance_weibo_null_129.csv", sep = ""),header=T, sep = ",")
+median.distances.linked.ghosts.weibo <- read.csv2(paste(data.path,"median_distance_weibo_null_44.csv", sep = ""),header=T, sep = ",")
 
-centerpoint.distances.weibo <- read.csv2("nulls/distanceDecCentroidsToHuanan/Weibo_1000_points_sampled_with_replacement_distance_to_huanan.csv",header=F)
+centerpoint.distances.weibo <- read.csv2(paste(data.path,"Weibo_1000_points_sampled_with_replacement_distance_to_huanan.csv", sep = ""),header=T, sep = ",")
 
-median.distances.all.worldpop.age <- read.csv2("nulls/distance_popdensityagegroups_null_155.csv",header=T, sep = ",")
-median.distances.notLinked.worldpop.age <- read.csv2("nulls/distance_popdensityagegroups_null_120.csv",header=T, sep = ",")
-median.distances.linked.worldpop.age <- read.csv2("nulls/distance_popdensityagegroups_null_35.csv",header=T, sep = ",")
-median.distances.linked.B.worldpop.age <- read.csv2("nulls/distance_popdensityagegroups_null_10.csv",header=T, sep = ",")
-median.distances.notLinked.B.worldpop.age <- read.csv2("nulls/distance_popdensityagegroups_null_1.csv",header=T, sep = ",")
+median.distances.all.worldpop.age <- read.csv2(paste(data.path,"distance_popdensityagegroups_null_155.csv", sep = ""),header=T, sep = ",")
+median.distances.notLinked.worldpop.age <- read.csv2(paste(data.path,"distance_popdensityagegroups_null_120.csv", sep = ""),header=T, sep = ",")
+median.distances.linked.worldpop.age <- read.csv2(paste(data.path,"distance_popdensityagegroups_null_35.csv", sep = ""),header=T, sep = ",")
+median.distances.linked.B.worldpop.age <- read.csv2(paste(data.path,"distance_popdensityagegroups_null_10.csv", sep = ""),header=T, sep = ",")
+median.distances.notLinked.B.worldpop.age <- read.csv2(paste(data.path,"distance_popdensityagegroups_null_1.csv", sep = ""),header=T, sep = ",")
 median.distances.notLinked.A1.worldpop.age <- median.distances.notLinked.B.worldpop.age
-median.distances.notLinked.A.worldpop.age <- read.csv2("nulls/distance_popdensityagegroups_null_2.csv",header=T, sep = ",")
-median.distances.B.worldpop.age <- read.csv2("nulls/distance_popdensityagegroups_null_11.csv",header=T, sep = ",")
-median.distances.confirmed.worldpop.age <- read.csv2("nulls/distance_popdensityagegroups_null_65.csv",header=T, sep = ",")
-median.distances.clinDiag.worldpop.age <- read.csv2("nulls/distance_popdensityagegroups_null_79.csv",header=T, sep = ",")
+median.distances.notLinked.A.worldpop.age <- read.csv2(paste(data.path,"distance_popdensityagegroups_null_2.csv", sep = ""),header=T, sep = ",")
+median.distances.B.worldpop.age <- read.csv2(paste(data.path,"distance_popdensityagegroups_null_11.csv", sep = ""),header=T, sep = ",")
+median.distances.confirmed.worldpop.age <- read.csv2(paste(data.path,"distance_popdensityagegroups_null_65.csv", sep = ""),header=T, sep = ",")
+median.distances.clinDiag.worldpop.age <- read.csv2(paste(data.path,"distance_popdensityagegroups_null_79.csv", sep = ""),header=T, sep = ",")
 
-median.distances.notLinked.sub.worldpop.age <- read.csv2("nulls/distance_popdensityagegroups_null_104.csv",header=T, sep = ",")
-median.distances.all.ghosts.worldpop.age <- read.csv2("nulls/distance_popdensityagegroups_null_164.csv",header=T, sep = ",")
-median.distances.notLinked.ghosts.worldpop.age <- read.csv2("nulls/distance_popdensityagegroups_null_129.csv",header=T, sep = ",")
-median.distances.linked.ghosts.worldpop.age <- read.csv2("nulls/distance_popdensityagegroups_null_44.csv",header=T, sep = ",")
+median.distances.notLinked.sub.worldpop.age <- read.csv2(paste(data.path,"distance_popdensityagegroups_null_104.csv", sep = ""),header=T, sep = ",")
+median.distances.all.ghosts.worldpop.age <- read.csv2(paste(data.path,"distance_popdensityagegroups_null_164.csv", sep = ""),header=T, sep = ",")
+median.distances.notLinked.ghosts.worldpop.age <- read.csv2(paste(data.path,"distance_popdensityagegroups_null_129.csv", sep = ""),header=T, sep = ",")
+median.distances.linked.ghosts.worldpop.age <- read.csv2(paste(data.path,"distance_popdensityagegroups_null_44.csv", sep = ""),header=T, sep = ",")
 
-filename2 <- "centroidnull_agegroups_1mill" 
+filename2 <- paste(data.path,"centroidnull_agegroups_1mill", sep = "") 
 centerpoint.distances.worldpop.age = read.csv(paste(filename2, "csv", sep = "."),header=T)
 
 ######## median distance approach, all cases, not linked, linked, linked B, not linked A, not linked B ######## 
@@ -232,15 +234,15 @@ centerpoint.dist.B <- (distVincentyEllipsoid(c(market.long,market.lat), c(center
 centerpoint.dist.confirmed <- (distVincentyEllipsoid(c(market.long,market.lat), c(centerpoint.longitude.confirmed,centerpoint.latitude.confirmed)))/1000
 centerpoint.dist.clinDiag <- (distVincentyEllipsoid(c(market.long,market.lat), c(centerpoint.longitude.clinDiag,centerpoint.latitude.clinDiag)))/1000
 
-centerpoint.dist.all.pValue.weibo <- getPvalue(centerpoint.dist,as.numeric(centerpoint.distances.weibo[,1]))
-centerpoint.dist.notLinked.pValue.weibo <- getPvalue(centerpoint.dist.notLinked,as.numeric(centerpoint.distances.weibo[,1]))
-centerpoint.dist.linked.pValue.weibo <- getPvalue(centerpoint.dist.linked,as.numeric(centerpoint.distances.weibo[,1]))
-centerpoint.dist.linked.B.pValue.weibo <- getPvalue(centerpoint.dist.linked.B,as.numeric(centerpoint.distances.weibo[,1]))
-centerpoint.dist.notLinked.B.pValue.weibo <- getPvalue(centerpoint.dist.notLinked.B,as.numeric(centerpoint.distances.weibo[,1]))
-centerpoint.dist.notLinked.A.pValue.weibo <- getPvalue(centerpoint.dist.notLinked.A,as.numeric(centerpoint.distances.weibo[,1]))
-centerpoint.dist.notLinked.A1.pValue.weibo <- getPvalue(centerpoint.dist.notLinked.A1,as.numeric(centerpoint.distances.weibo[,1]))
-centerpoint.dist.confirmed.pValue.weibo <- getPvalue(centerpoint.dist.confirmed,as.numeric(centerpoint.distances.weibo[,1]))
-centerpoint.dist.clinDiag.pValue.weibo <- getPvalue(centerpoint.dist.clinDiag,as.numeric(centerpoint.distances.weibo[,1]))
+centerpoint.dist.all.pValue.weibo <- getPvalue(centerpoint.dist,as.numeric(centerpoint.distances.weibo$distance_market_km))
+centerpoint.dist.notLinked.pValue.weibo <- getPvalue(centerpoint.dist.notLinked,as.numeric(centerpoint.distances.weibo$distance_market_km))
+centerpoint.dist.linked.pValue.weibo <- getPvalue(centerpoint.dist.linked,as.numeric(centerpoint.distances.weibo$distance_market_km))
+centerpoint.dist.linked.B.pValue.weibo <- getPvalue(centerpoint.dist.linked.B,as.numeric(centerpoint.distances.weibo$distance_market_km))
+centerpoint.dist.notLinked.B.pValue.weibo <- getPvalue(centerpoint.dist.notLinked.B,as.numeric(centerpoint.distances.weibo$distance_market_km))
+centerpoint.dist.notLinked.A.pValue.weibo <- getPvalue(centerpoint.dist.notLinked.A,as.numeric(centerpoint.distances.weibo$distance_market_km))
+centerpoint.dist.notLinked.A1.pValue.weibo <- getPvalue(centerpoint.dist.notLinked.A1,as.numeric(centerpoint.distances.weibo$distance_market_km))
+centerpoint.dist.confirmed.pValue.weibo <- getPvalue(centerpoint.dist.confirmed,as.numeric(centerpoint.distances.weibo$distance_market_km))
+centerpoint.dist.clinDiag.pValue.weibo <- getPvalue(centerpoint.dist.clinDiag,as.numeric(centerpoint.distances.weibo$distance_market_km))
 
 centerpoint.dist.all.pValue.worldpop.age <- getPvalue(centerpoint.dist,centerpoint.distances.worldpop.age$distance_huanan)
 centerpoint.dist.notLinked.pValue.worldpop.age <- getPvalue(centerpoint.dist.notLinked,centerpoint.distances.worldpop.age$distance_huanan)

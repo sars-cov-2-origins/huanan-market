@@ -42,12 +42,22 @@
 
 - `distance_popdensityagegroups_null_155.csv` - Median distance to Huanan null sampled from population density in Wuhan, sample size 155 
 
-- `median_distance_popdenseages_null_1.csv` - Distance to Huanan null sampled from population density in Wuhan, sample size 1 
+- `distance_popdensityagegroups_null_1.csv` - Distance to Huanan null sampled from population density in Wuhan, sample size 1 
 
-- `median_distance_popdenseages_null_2.csv` - Median distance to Huanan null sampled from population density in Wuhan, sample size 2 
+- `distance_popdensityagegroups_null_10.csv` - Distance to Huanan null sampled from population density in Wuhan, sample size 10 
 
-- `median_distance_popdenseages_null_11.csv` - Median distance to Huanan null sampled from population density in Wuhan, sample size 11 
+- `distance_popdensityagegroups_null_11.csv` - Distance to Huanan null sampled from population density in Wuhan, sample size 11
 
+- `distance_popdensityagegroups_null_2.csv` - Distance to Huanan null sampled from population density in Wuhan, sample size 2 
+
+- `distance_popdensityagegroups_null_164.csv` - Distance to Huanan null sampled from population density in Wuhan, sample size 164
+
+- `distance_popdensityagegroups_null_104.csv` - Distance to Huanan null sampled from population density in Wuhan, sample size 104
+
+- `distance_popdensityagegroups_null_44.csv` - Distance to Huanan null sampled from population density in Wuhan, sample size 44
+
+- `distance_popdensityagegroups_null_129.csv` - Distance to Huanan null sampled from population density in Wuhan, sample size 129 
+ 
 - `median_distance_weibo_null_1.csv` - Median distance to Huanan null sampled from Weibo help seekers in Wuhan, sample size 1 
 
 - `median_distance_weibo_null_11.csv` - Median distance to Huanan null sampled from Weibo help seekers in Wuhan, sample size 11
@@ -59,6 +69,27 @@
 - `median_distance_weibo_null_2.csv` - Median distance to Huanan null sampled from Weibo help seekers in Wuhan, sample size 2
 
 - `median_distance_weibo_null_35.csv` - Median distance to Huanan null sampled from Weibo help seekers in Wuhan, sample size 35
+
+- `median_distance_weibo_null_79.csv` - Median distance to Huanan null sampled from Weibo help seekers in Wuhan, sample size 79
+
+- `median_distance_weibo_null_65.csv` - Median distance to Huanan null sampled from Weibo help seekers in Wuhan, sample size 65
+
+- `median_distance_weibo_null_164.csv` - Median distance to Huanan null sampled from Weibo help seekers in Wuhan, sample size 164
+
+- `median_distance_weibo_null_129.csv` - Median distance to Huanan null sampled from Weibo help seekers in Wuhan, sample size 129
+
+- `median_distance_weibo_null_44.csv` - Median distance to Huanan null sampled from Weibo help seekers in Wuhan, sample size 44
+
+- `median_distance_weibo_null_104.csv` - Median distance to Huanan null sampled from Weibo help seekers in Wuhan, sample size 104
+
+- `median_distance_weibo_null_10.csv` - Median distance to Huanan null sampled from Weibo help seekers in Wuhan, sample size 10
+
+- `Weibo_1000_points_sampled_with_replacement_distance_to_huanan.csv` - A thousand points distances to Huanan sampled with replacement from Weibo help seekers in Wuhan
+
+
+
+
+
 
 - `median_distance_weibo_null_36.csv` - Median distance to Huanan null sampled from Weibo help seekers in Wuhan, sample size 36
 

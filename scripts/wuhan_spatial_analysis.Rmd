@@ -567,7 +567,7 @@ Age group	Male (WHO Fig 5)	Female (WHO Fig 5)	Total	Proportion December
 
 
 Median nulls, built from population density data age matched
-sample sizes: 155, 120, 79, 65, 36, 35, 11, 2, 1
+sample sizes: 155, 120, 79, 65, 36, 35, 11, 10, 2, 1, 104, 164, 129, 44
 
 
 
@@ -762,7 +762,7 @@ median_distance_popdenseages_null_11$Pseudorep<-c(1:1000)
 median_distance_popdenseages_null_11<-median_distance_popdenseages_null_11%>% arrange(Median_distance_huanan)
 
 
-write.csv(median_distance_popdenseages_null_11, "../data/median_distance_popdenseages_null_11.csv")
+write.csv(median_distance_popdenseages_null_11, "../data/distance_popdensityagegroups_null_11.csv")
 
 
 median_distance_popdenseages_null_2<-data.frame(matrix(ncol=2, nrow=1000))
@@ -782,7 +782,7 @@ median_distance_popdenseages_null_2$Pseudorep<-c(1:1000)
 median_distance_popdenseages_null_2<-median_distance_popdenseages_null_2 %>% arrange(Median_distance_huanan)
 
 
-write.csv(median_distance_popdenseages_null_2, "../data/median_distance_popdenseages_null_2.csv")
+write.csv(median_distance_popdenseages_null_2, "../data/distance_popdensityagegroups_null_2.csv")
 
 
 
@@ -803,16 +803,219 @@ median_distance_popdenseages_null_1$Pseudorep<-c(1:1000)
 median_distance_popdenseages_null_1<-median_distance_popdenseages_null_1 %>% arrange(Median_distance_huanan)
 
 
-write.csv(median_distance_popdenseages_null_1, "../data/median_distance_popdenseages_null_1.csv")
+write.csv(median_distance_popdenseages_null_1, "../data/distance_popdensityagegroups_null_1.csv")
+
+
+median_distance_popdenseages_null_10<-data.frame(matrix(ncol=2, nrow=1000))
+colnames(median_distance_popdenseages_null_10)<-c("Pseudorep", "Median_distance_huanan")
+distances_pseudorep<-c()
+
+
+  for(i in 1:1000){
+  pseudo_replicate<-sample_n(agegroups_all, 10, replace = T, weight = value)
+    distances_huanan<-distHaversine(pseudo_replicate[,1:2], huanan_1000[10,])/1000
+    median_dist<-median(distances_huanan)
+   median_distance_popdenseages_null_10[i,2]<-median_dist
+  
+  }
+
+median_distance_popdenseages_null_10$Pseudorep<-c(1:1000)
+median_distance_popdenseages_null_10<-median_distance_popdenseages_null_10 %>% arrange(Median_distance_huanan)
+
+
+write.csv(median_distance_popdenseages_null_10, "../data/distance_popdensityagegroups_null_10.csv")
+
+#104, 164, 129, 44
+median_distance_popdenseages_null_44<-data.frame(matrix(ncol=2, nrow=1000))
+colnames(median_distance_popdenseages_null_44)<-c("Pseudorep", "Median_distance_huanan")
+distances_pseudorep<-c()
+
+
+  for(i in 1:1000){
+  pseudo_replicate<-sample_n(agegroups_all, 44, replace = T, weight = value)
+    distances_huanan<-distHaversine(pseudo_replicate[,1:2], huanan_1000[44,])/1000
+    median_dist<-median(distances_huanan)
+   median_distance_popdenseages_null_44[i,2]<-median_dist
+  
+  }
+
+median_distance_popdenseages_null_44$Pseudorep<-c(1:1000)
+median_distance_popdenseages_null_44<-median_distance_popdenseages_null_44 %>% arrange(Median_distance_huanan)
+
+
+write.csv(median_distance_popdenseages_null_44, "../data/distance_popdensityagegroups_null_44.csv")
+
+
+median_distance_popdenseages_null_129<-data.frame(matrix(ncol=2, nrow=1000))
+colnames(median_distance_popdenseages_null_129)<-c("Pseudorep", "Median_distance_huanan")
+distances_pseudorep<-c()
+
+
+  for(i in 1:1000){
+  pseudo_replicate<-sample_n(agegroups_all, 129, replace = T, weight = value)
+    distances_huanan<-distHaversine(pseudo_replicate[,1:2], huanan_1000[129,])/1000
+    median_dist<-median(distances_huanan)
+   median_distance_popdenseages_null_129[i,2]<-median_dist
+  
+  }
+
+median_distance_popdenseages_null_129$Pseudorep<-c(1:1000)
+median_distance_popdenseages_null_129<-median_distance_popdenseages_null_129 %>% arrange(Median_distance_huanan)
+
+
+write.csv(median_distance_popdenseages_null_129, "../data/distance_popdensityagegroups_null_129.csv")
+
+
+median_distance_popdenseages_null_104<-data.frame(matrix(ncol=2, nrow=1000))
+colnames(median_distance_popdenseages_null_104)<-c("Pseudorep", "Median_distance_huanan")
+distances_pseudorep<-c()
+
+
+  for(i in 1:1000){
+  pseudo_replicate<-sample_n(agegroups_all, 104, replace = T, weight = value)
+    distances_huanan<-distHaversine(pseudo_replicate[,1:2], huanan_1000[104,])/1000
+    median_dist<-median(distances_huanan)
+   median_distance_popdenseages_null_104[i,2]<-median_dist
+  
+  }
+
+median_distance_popdenseages_null_104$Pseudorep<-c(1:1000)
+median_distance_popdenseages_null_104<-median_distance_popdenseages_null_104 %>% arrange(Median_distance_huanan)
+
+
+write.csv(median_distance_popdenseages_null_104, "../data/distance_popdensityagegroups_null_104.csv")
+
+
+median_distance_popdenseages_null_164<-data.frame(matrix(ncol=2, nrow=1000))
+colnames(median_distance_popdenseages_null_164)<-c("Pseudorep", "Median_distance_huanan")
+distances_pseudorep<-c()
+
+
+  for(i in 1:1000){
+  pseudo_replicate<-sample_n(agegroups_all, 164, replace = T, weight = value)
+    distances_huanan<-distHaversine(pseudo_replicate[,1:2], huanan_1000[164,])/1000
+    median_dist<-median(distances_huanan)
+   median_distance_popdenseages_null_164[i,2]<-median_dist
+  
+  }
+
+median_distance_popdenseages_null_164$Pseudorep<-c(1:1000)
+median_distance_popdenseages_null_164<-median_distance_popdenseages_null_164 %>% arrange(Median_distance_huanan)
+
+
+write.csv(median_distance_popdenseages_null_164, "../data/distance_popdensityagegroups_null_164.csv")
 
 ```
 Median nulls, built from Weibo help seekers data, cases in January-February 2020
-sample sizes: 155, 120, 79, 65, 36, 35, 11, 2, 1
+sample sizes: 155, 120, 79, 65, 36, 35, 11, 2, 1. 164, 129, 104, 44, 10
 
 
 
 ```{r}
 weibo_df<-read.csv("../data/weibox_help_seekers_jan-2020.csv")
+
+
+
+median_distance_weibo_null_10<-data.frame(matrix(ncol=2, nrow=1000))
+colnames(median_distance_weibo_null_10)<-c("Pseudorep", "Median_distance_huanan")
+distances_pseudorep<-c()
+
+
+for(i in 1:1000){
+pseudo_replicate<-sample_n(weibo_df, 164, replace = T)
+  median_dist<-median(pseudo_replicate$distance_market_km)
+  median_distance_weibo_null_10[i,2]<-median_dist
+
+}
+
+median_distance_weibo_null_10$Pseudorep<-c(1:1000)
+median_distance_weibo_null_10<-median_distance_weibo_null_10 %>% arrange(Median_distance_huanan)
+
+write.csv(median_distance_weibo_null_10, "../data/median_distance_weibo_null_10.csv")
+
+
+
+median_distance_weibo_null_104<-data.frame(matrix(ncol=2, nrow=1000))
+colnames(median_distance_weibo_null_104)<-c("Pseudorep", "Median_distance_huanan")
+distances_pseudorep<-c()
+
+
+for(i in 1:1000){
+pseudo_replicate<-sample_n(weibo_df, 104, replace = T)
+  median_dist<-median(pseudo_replicate$distance_market_km)
+  median_distance_weibo_null_104[i,2]<-median_dist
+
+}
+
+median_distance_weibo_null_104$Pseudorep<-c(1:1000)
+median_distance_weibo_null_104<-median_distance_weibo_null_104 %>% arrange(Median_distance_huanan)
+
+write.csv(median_distance_weibo_null_104, "../data/median_distance_weibo_null_104.csv")
+
+median_distance_weibo_null_44<-data.frame(matrix(ncol=2, nrow=1000))
+colnames(median_distance_weibo_null_44)<-c("Pseudorep", "Median_distance_huanan")
+distances_pseudorep<-c()
+
+
+for(i in 1:1000){
+pseudo_replicate<-sample_n(weibo_df, 44, replace = T)
+  median_dist<-median(pseudo_replicate$distance_market_km)
+  median_distance_weibo_null_44[i,2]<-median_dist
+
+}
+
+median_distance_weibo_null_44$Pseudorep<-c(1:1000)
+median_distance_weibo_null_44<-median_distance_weibo_null_44 %>% arrange(Median_distance_huanan)
+
+write.csv(median_distance_weibo_null_44, "../data/median_distance_weibo_null_44.csv")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+median_distance_weibo_null_164<-data.frame(matrix(ncol=2, nrow=1000))
+colnames(median_distance_weibo_null_164)<-c("Pseudorep", "Median_distance_huanan")
+distances_pseudorep<-c()
+
+
+for(i in 1:1000){
+pseudo_replicate<-sample_n(weibo_df, 164, replace = T)
+  median_dist<-median(pseudo_replicate$distance_market_km)
+  median_distance_weibo_null_164[i,2]<-median_dist
+
+}
+
+median_distance_weibo_null_164$Pseudorep<-c(1:1000)
+median_distance_weibo_null_164<-median_distance_weibo_null_164 %>% arrange(Median_distance_huanan)
+
+write.csv(median_distance_weibo_null_164, "../data/median_distance_weibo_null_164.csv")
+
+
+median_distance_weibo_null_129<-data.frame(matrix(ncol=2, nrow=1000))
+colnames(median_distance_weibo_null_129)<-c("Pseudorep", "Median_distance_huanan")
+distances_pseudorep<-c()
+
+
+for(i in 1:1000){
+pseudo_replicate<-sample_n(weibo_df, 129, replace = T)
+  median_dist<-median(pseudo_replicate$distance_market_km)
+  median_distance_weibo_null_129[i,2]<-median_dist
+
+}
+
+median_distance_weibo_null_129$Pseudorep<-c(1:1000)
+median_distance_weibo_null_129<-median_distance_weibo_null_129 %>% arrange(Median_distance_huanan)
+
+write.csv(median_distance_weibo_null_129, "../data/median_distance_weibo_null_129.csv")
 
 
 median_distance_weibo_null_1<-data.frame(matrix(ncol=2, nrow=1000))
@@ -1011,6 +1214,11 @@ write.csv(centroidnull_agegroups_1mill, "../data/centroidnull_agegroups_1mill.cs
 centroidnull_weibo_1mill<-sample_n(weibo_df, 1000000, replace = T) 
 centroidnull_weibo_1mill<-centroidnull_weibo_1mill%>%arrange(distance_market_km)
 write.csv(centroidnull_weibo_1mill, "../data/centroidnull_weibo_1mill.csv")
+
+centroidnull_weibo<-sample_n(weibo_df, 1000, replace = T) 
+centroidnull_weibo<-centroidnull_weibo%>%arrange(distance_market_km)
+write.csv(centroidnull_weibo, "../data/Weibo_1000_points_sampled_with_replacement_distance_to_huanan.csv")
+
 
 ```
 
